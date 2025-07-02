@@ -69,7 +69,7 @@ body::before {
   height: 100%;
   /* AJUSTADO: Opacidade do overlay. Como a imagem já é escura, podemos usar um overlay mais sutil.
      Você pode ajustar o valor (ex: 0.3, 0.5) para encontrar o equilíbrio ideal de contraste. */
-  background-color: rgba(13, 27, 42, 0.5); /* Sua cor --bg-primary com 50% de opacidade */
+  background-color: rgba(13, 27, 42, 0.1); /* Sua cor --bg-primary com 50% de opacidade */
   /* Coloca o overlay atrás do conteúdo, mas acima da imagem de fundo. */
   z-index: -1; 
 }
