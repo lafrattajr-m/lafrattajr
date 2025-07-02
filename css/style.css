@@ -42,7 +42,7 @@ body {
   align-items: center; /* Centraliza o conteúdo principal horizontalmente */
 
   /* --- IMAGEM DE BACKGROUND: João Pessoa --- */
-  background-image: url('.../imgs/bg_jampa.png'); /* Imagem de fundo de João Pessoa */
+  background-image: url('/imgs/bg_jampa.png'); /* Imagem de fundo de João Pessoa */
   background-size: cover; /* Faz a imagem cobrir toda a área do body */
   background-position: center center; /* Centraliza a imagem no viewport */
   background-repeat: no-repeat; /* Evita que a imagem se repita */
