@@ -1,84 +1,55 @@
-/*================================================================================
-  1. VARIÁVEIS DE CORES E EFEITOS
-  Define a paleta de cores e propriedades de transição para reuso em todo o CSS.
-================================================================================*/
 :root {
-  /* Paleta de Cores do Projeto (definida por você) */
-  --bg-primary: #0D1B2A;       /* Azul Profundo Luxo */
-  --gold-base: #B38E00;        /* Dourado Clássico */
-  --gold-accent: #FAD266;      /* Dourado Luminoso */
-  --text-light: #F5F5F5;       /* Branco Gelo */
-  --cta-green: #2E7D32;        /* Verde Esmeralda para Call-to-Action */
-  --gray-divider: #424242;     /* Cinza Chumbo para divisórias */
+  --bg-primary: #0D1B2A;
+  --gold-base: #B38E00;
+  --gold-accent: #FAD266;
+  --text-light: #F5F5F5;
+  --cta-green: #2E7D32;
+  --gray-divider: #424242;
 
-  /* Efeitos e Transições */
-  --hover-effect: rgba(179, 142, 0, 0.2); /* Efeito de hover translúcido */
-  --transition: all 0.3s ease; /* Transição padrão suave */
+  --hover-effect: rgba(179, 142, 0, 0.2);
+  --transition: all 0.3s ease;
 }
 
-/*================================================================================
-  2. RESET BÁSICO E ESTILOS GLOBAIS
-  Configurações iniciais para o corpo da página e reset de estilos padrões do navegador.
-================================================================================*/
+/* RESET */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Garante que padding e borda não aumentem o tamanho do elemento */
+  box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth; /* Rolagem suave para âncoras */
-  overflow-x: hidden; /* Garante que não haja barra de rolagem horizontal desnecessária */
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
-  font-family: 'Poppins', sans-serif; /* Fonte principal do site */
-  background-color: var(--bg-primary); /* Cor de fundo de fallback (se a imagem não carregar) */
-  color: var(--text-light); /* Cor padrão do texto */
-  line-height: 1.6; /* Espaçamento entre linhas para melhor leitura */
-  padding: 20px; /* Padding padrão em volta do conteúdo */
-  min-height: 100vh; /* Garante que o body ocupe pelo menos 100% da altura da viewport */
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-light);
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centraliza o conteúdo principal horizontalmente */
-  overflow-x: hidden; /* Garante que não haja barra de rolagem horizontal no body */
-
-  /* --- IMAGEM DE BACKGROUND: João Pessoa (Noturna e Escurecida) --- */
-  background-image: url('/imgs/bg_jampa.png'); /* Caminho absoluto para a imagem de fundo PNG */
-  background-size: cover; /* Faz a imagem cobrir toda a área do body */
-  background-position: center center; /* Centraliza a imagem no viewport */
-  background-repeat: no-repeat; /* Evita que a imagem se repita */
-  /* ALTERADO PARA MELHOR PERFORMANCE:
-     'scroll' é mais performático que 'fixed', pois a imagem rola junto com o conteúdo,
-     evitando problemas de "pulso" em alguns dispositivos. */
-  background-attachment: scroll; 
-  
-  /* Necessário para posicionar o pseudo-elemento que cria o overlay */
-  position: relative; 
-  /* Garante que o conteúdo (texto, links) fique acima da imagem e do overlay */
-  z-index: 1; 
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('../imgs/bg_jampa.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  position: relative;
+  z-index: 1;
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-/* --- OVERLAY PARA MELHORAR LEGIBILIDADE DO TEXTO SOBRE A IMAGEM DE FUNDO --- */
 body::before {
-  content: ''; /* Conteúdo vazio para o pseudo-elemento */
-  position: absolute; /* Posição absoluta em relação ao 'body' */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* AJUSTADO: Opacidade do overlay. Como a imagem já é escura, podemos usar um overlay mais sutil.
-     Você pode ajustar o valor (ex: 0.3, 0.5) para encontrar o equilíbrio ideal de contraste. */
-  background-color: rgba(13, 27, 42, 0.5); /* Sua cor --bg-primary com 50% de opacidade */
-  /* Coloca o overlay atrás do conteúdo, mas acima da imagem de fundo. */
-  z-index: -1; 
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(13, 27, 42, 0.5);
+  z-index: -1;
 }
 
-/*================================================================================
-  3. LAYOUT PRINCIPAL (CONTAINERS)
-  Estilos para as principais seções da página.
-================================================================================*/
-/* --- CABEÇALHO (PROFILE) --- */
+/* HEADER */
 .profile {
   text-align: center;
   margin-bottom: 2rem;
@@ -88,163 +59,163 @@ body::before {
 .profile-pic {
   width: 120px;
   height: 120px;
-  border-radius: 50%; /* Transforma a imagem em um círculo */
-  border: 3px solid var(--gold-base); /* Borda dourada em volta da foto */
-  object-fit: cover; /* Garante que a imagem preencha o círculo sem distorcer */
+  border-radius: 50%;
+  border: 3px solid var(--gold-base);
+  object-fit: cover;
   margin-bottom: 1rem;
 }
 
 .profile h1 {
   font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-  color: var(--gold-accent); /* Título em dourado */
+  color: var(--gold-accent);
 }
 
 .profile p {
   font-size: 1rem;
-  opacity: 0.9; /* Leve transparência para o parágrafo */
+  opacity: 0.9;
 }
 
-/* --- CONTÊINER PRINCIPAL DOS LINKS (TREE CONTAINER) --- */
+/* CONTAINER PRINCIPAL */
 .tree-container {
   width: 100%;
-  max-width: 600px; /* Largura máxima para centralizar o conteúdo */
+  max-width: 600px;
   display: flex;
   flex-direction: column;
-  gap: 1rem; /* Espaçamento entre os grupos de links */
+  gap: 1rem;
 }
 
-/* --- RODAPÉ (FOOTER) --- */
-.footer {
-  text-align: center;
-  margin-top: 3rem; /* Espaçamento superior para separar do conteúdo */
-  padding-top: 1rem; /* Padding interno superior */
-  width: 100%;
-  border-top: 1px solid var(--gray-divider); /* Linha divisória acima do rodapé */
-  font-size: 0.9rem;
-  color: var(--gold-accent); /* Texto do rodapé em dourado */
-}
-
-/*================================================================================
-  4. COMPONENTES: GRUPOS DE LINKS (DETAILS/SUMMARY)
-  Estilos para os elementos interativos de grupos de links (accordion).
-================================================================================*/
-/* --- GRUPO PRINCIPAL DE LINKS (DETAILS TAG) --- */
+/* GRUPOS */
 .tree-group {
-  border: 1px solid var(--gray-divider); /* Borda do grupo */
-  border-radius: 10px; /* Cantos arredondados */
-  overflow: hidden; /* Garante que o conteúdo não vaze */
-  transition: var(--transition); /* Transição suave para quaisquer mudanças */
+  border: 1px solid var(--gray-divider);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: var(--transition);
 }
 
-/* --- TÍTULO/SUMÁRIO DOS GRUPOS (SUMMARY TAG) --- */
+/* HEADER DO GRUPO */
 .tree-main-link {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.5rem;
-  background-color: rgba(179, 142, 0, 0.1); /* Fundo sutil */
-  cursor: pointer; /* Indica que o elemento é clicável */
-  font-weight: 600; /* Texto em negrito */
-  list-style: none; /* Remove marcador padrão do <summary> */
+  background-color: rgba(179, 142, 0, 0.1);
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
   color: var(--gold-accent);
 }
 
 .tree-main-link:hover {
-  background-color: var(--hover-effect); /* Efeito de hover */
+  background-color: var(--hover-effect);
 }
 
 .tree-group[open] .tree-main-link {
-  background-color: rgba(179, 142, 0, 0.25); /* Fundo mais escuro quando aberto */
+  background-color: rgba(179, 142, 0, 0.25);
 }
 
-/* --- DESCRIÇÃO DOS GRUPOS --- */
+/* DESCRIÇÃO */
 .tree-description {
   padding: 0.8rem 1.5rem;
   font-size: 0.9rem;
-  background-color: rgba(13, 27, 42, 0.4); /* Fundo semi-transparente */
+  background-color: rgba(13, 27, 42, 0.4);
   color: var(--gold-accent);
   line-height: 1.5;
 }
 
-/* --- SUBLINKS DENTRO DOS GRUPOS --- */
+/* LINKS INTERNOS */
 .tree-sublinks {
   display: flex;
   flex-direction: column;
   padding: 0.5rem 1rem 1rem;
-  background-color: rgba(13, 27, 42, 0.6); /* Fundo mais escuro para os sublinks */
-  gap: 0.5rem; /* Espaçamento entre os sublinks */
+  background-color: rgba(13, 27, 42, 0.6);
+  gap: 0.5rem;
 }
 
 .tree-sublink {
   display: flex;
   align-items: center;
-  gap: 1rem; /* Espaçamento entre ícone e texto do sublink */
+  gap: 1rem;
   padding: 0.8rem 1rem;
   color: var(--text-light);
-  text-decoration: none; /* Remove sublinhado padrão do link */
+  text-decoration: none;
   border-radius: 8px;
   transition: var(--transition);
   font-size: 0.95rem;
 }
 
 .tree-sublink:hover {
-  background-color: rgba(245, 245, 245, 0.1); /* Efeito de hover sutil */
-  transform: translateX(35px); /* Efeito de deslize ao passar o mouse */
+  background-color: rgba(245, 245, 245, 0.1);
+  transform: translateX(35px);
 }
 
-/* --- ESTILO DOS ÍCONES NOS SUBLINKS --- */
-.tree-sublink img {
-  width: 35px; /* Largura do ícone */
-  height: 35px; /* Altura do ícone */
-  object-fit: contain; /* Garante que a imagem se encaixe sem cortar */
+/* ÍCONES */
+.tree-sublink img,
+.main-icon {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  vertical-align: middle;
+  margin-right: 0.5em;
 }
 
-/* --- LINKS INDIVIDUAIS (FORA DOS GRUPOS COLLAPSIBLE) --- */
+/* LINKS EXTERNOS */
 .tree-main-link.solo {
   text-decoration: none;
-  color: inherit;
+  color: var(--text-light);
   border-radius: 10px;
   margin-bottom: 0.5rem;
-  background-color: rgba(46, 125, 50, 0.1); /* Verde Esmeralda com transparência */
-  color: var(--text-light);
+  background-color: rgba(46, 125, 50, 0.1);
 }
 
 .tree-main-link.solo:hover {
-  background-color: rgba(46, 125, 50, 0.2); /* Verde Esmeralda mais intenso no hover */
+  background-color: rgba(46, 125, 50, 0.2);
 }
 
-/* --- ÍCONE DE TOGGLE (+ / -) --- */
+/* ÍCONE DE TOGGLE */
 .toggle-icon {
   font-weight: bold;
-  transition: transform 0.3s ease; /* Transição para o giro do ícone */
+  transition: transform 0.3s ease;
 }
 
 .tree-group[open] .toggle-icon {
-  transform: rotate(180deg); /* Gira o ícone para indicar "aberto" */
+  transform: rotate(180deg);
 }
 
-/*================================================================================
-  5. RESPONSIVIDADE E ACESSIBILIDADE
-  Ajustes de estilo para diferentes tamanhos de tela e preferências do usuário.
-================================================================================*/
+/* FOOTER */
+.footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 1rem;
+  width: 100%;
+  border-top: 1px solid var(--gray-divider);
+  font-size: 0.9rem;
+  color: var(--gold-accent);
+}
+/* EFEITO DE BRILHO SUAVE AO PASSAR O MOUSE */
+.tree-sublink:hover,
+.tree-main-link.solo:hover {
+  background-color: rgba(250, 210, 102, 0.08); /* Dourado luminoso suave */
+  box-shadow: 0 0 12px rgba(250, 210, 102, 0.25); /* Brilho interno sutil */
+  transform: translateX(10px); /* Leve movimento para a direita */
+}
+
+
+/* RESPONSIVO */
 @media (max-width: 480px) {
   body {
-    padding: 15px; /* Reduz o padding lateral para telas muito pequenas */
-    /* Ajuste para garantir que o rodapé não fique espremido em telas menores */
-    padding-bottom: 40px; 
+    padding: 15px;
   }
-  
-  .tree-main-link, .tree-sublink {
-    padding: 0.9rem 1rem; /* Ajusta padding de links para mobile */
+
+  .tree-main-link,
+  .tree-sublink {
+    padding: 0.9rem 1rem;
   }
-  
+
   .tree-description {
-    padding: 0.7rem 1rem; /* Ajusta padding de descrições para mobile */
+    padding: 0.7rem 1rem;
   }
 }
 
-/* Desabilita animações para usuários que preferem reduzir movimento (acessibilidade) */
 @media (prefers-reduced-motion: reduce) {
   * {
     transition: none !important;
