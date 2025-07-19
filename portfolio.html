@@ -3,328 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio Profissional | Marcos Lafratta Jr - Corretor de Imóveis & Consultor Estratégico</title>
-  <meta name="description" content="Portfólio profissional de Marcos Lafratta Jr - Corretor de Imóveis (CRECI PB 17102-F) e Consultor Estratégico em Negócios com expertise em marketing digital e inteligência de dados.">
   
-  <link rel="stylesheet" href="https://lafrattajr.com.br/css/style.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+  <!-- Meta Tags SEO -->
+  <title>Marcos Lafratta Jr | Corretor de Imóveis CRECI PB 17102-F e Consultor em João Pessoa</title>
+  <meta name="description" content="Especialista em Minha Casa Minha Vida, investimentos imobiliários e marketing digital para o setor. Atendimento em João Pessoa e região.">
+  <meta name="keywords" content="corretor de imóveis, João Pessoa, MCMV 2025, CRECI PB 17102-F, consultor imobiliário, investimentos, Lafratta Jr">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lafrattajr.com.br/portfolio">
+  <meta property="og:title" content="Marcos Lafratta Jr - Corretor e Consultor Imobiliário | CRECI PB 17102-F">
+  <meta property="og:description" content="Soluções completas em imóveis, desde Minha Casa Minha Vida até investimentos de alto padrão em João Pessoa">
+  <meta property="og:image" content="https://lafrattajr.com.br/imgs/preview-lafrattajr.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://lafrattajr.com.br/portfolio">
+  <meta property="twitter:title" content="Marcos Lafratta Jr - Corretor e Consultor Imobiliário | CRECI PB 17102-F">
+  <meta property="twitter:description" content="Especialista em Minha Casa Minha Vida e estratégias digitais para o mercado imobiliário">
+  <meta property="twitter:image" content="https://lafrattajr.com.br/imgs/preview-lafrattajr.png">
+
+  <!-- Favicon -->
   <link rel="icon" href="https://lafrattajr.com.br/imgs/favicon.png" type="image/png">
-  <!-- Adicionei o Font Awesome atualizado -->
+  
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Ícones -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
-  <style>
-    /* Estilos específicos para a página de portfólio */
-    .portfolio-page {
-      background-color: #F5F5F5;
-      color: #0D1B2A;
-      padding: 40px 20px;
-      min-height: 100vh;
-    }
-    
-    .portfolio-container {
-      max-width: 1000px;
-      margin: 0 auto;
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 10px 30px rgba(13, 27, 42, 0.1);
-      overflow: hidden;
-    }
-    
-    .portfolio-header {
-      background: linear-gradient(135deg, #0D1B2A 0%, #2A9D8F 100%);
-      color: white;
-      padding: 40px;
-      text-align: center;
-      position: relative;
-    }
-    
-    .profile-image {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      border: 5px solid #FAD266;
-      object-fit: cover;
-      margin: 0 auto 20px;
-      display: block;
-    }
-    
-    .portfolio-header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-      color: #FAD266;
-    }
-    
-    .portfolio-header h2 {
-      font-size: 1.2rem;
-      font-weight: 400;
-      margin-bottom: 20px;
-      opacity: 0.9;
-    }
-    
-    .contact-badges {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 25px;
-      flex-wrap: wrap;
-    }
-    
-    .contact-badge {
-      background: rgba(245, 245, 245, 0.2);
-      border: 1px solid #FAD266;
-      border-radius: 50px;
-      padding: 10px 20px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      transition: all 0.3s;
-      text-decoration: none;
-      color: white;
-    }
-    
-    .contact-badge:hover {
-      background: #FAD266;
-      color: #0D1B2A;
-      transform: translateY(-3px);
-    }
-    
-    .portfolio-section {
-      padding: 40px;
-      border-bottom: 1px solid #E9D8A6;
-    }
-    
-    .portfolio-section:last-child {
-      border-bottom: none;
-    }
-    
-    .section-title {
-      color: #B38E00;
-      font-size: 1.8rem;
-      margin-bottom: 25px;
-      position: relative;
-      padding-bottom: 10px;
-    }
-    
-    .section-title:after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 80px;
-      height: 3px;
-      background: #FAD266;
-    }
-    
-    .competencies-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    
-    .competency-card {
-      background: #F5F5F5;
-      padding: 20px;
-      border-radius: 8px;
-      border-left: 4px solid #2E7D32;
-    }
-    
-    .experience-item {
-      margin-bottom: 30px;
-    }
-    
-    .experience-header {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 10px;
-      flex-wrap: wrap;
-    }
-    
-    .experience-title {
-      font-weight: 600;
-      color: #0D1B2A;
-      font-size: 1.1rem;
-    }
-    
-    .experience-date {
-      color: #6C7A89;
-      font-size: 0.9rem;
-    }
-    
-    .experience-company {
-      font-weight: 500;
-      color: #2A9D8F;
-      margin-bottom: 8px;
-    }
-    
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 20px;
-    }
-    
-    .project-card {
-      border: 1px solid #E9D8A6;
-      border-radius: 8px;
-      padding: 20px;
-      transition: all 0.3s;
-    }
-    
-    .project-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-    
-    .project-title {
-      color: #0D1B2A;
-      font-weight: 600;
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    
-    .project-link {
-      color: #2A9D8F;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 10px;
-      font-weight: 500;
-    }
-    
-    .project-link:hover {
-      text-decoration: underline;
-    }
-    
-    .cta-section {
-      text-align: center;
-      padding: 40px;
-      background: linear-gradient(135deg, #E9D8A6 0%, #FAD266 100%);
-    }
-    
-    .cta-button {
-      display: inline-block;
-      background: #0D1B2A;
-      color: white;
-      padding: 15px 30px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 600;
-      margin-top: 20px;
-      transition: all 0.3s;
-      border: 2px solid #0D1B2A;
-    }
-    
-    .cta-button:hover {
-      background: transparent;
-      color: #0D1B2A;
-      transform: translateY(-3px);
-    }
-
-    /* Estilos do WhatsApp Float - Atualizados */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      z-index: 1000;
-      opacity: 0;
-      transform: translateY(100px);
-      transition: all 0.5s ease-out;
-    }
-    
-    .whatsapp-icon {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 60px;
-      height: 60px;
-      background: #25D366;
-      color: white;
-      border-radius: 50%;
-      font-size: 30px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      transition: all 0.3s;
-    }
-    
-    .whatsapp-icon:hover {
-      background: #128C7E;
-      transform: scale(1.1);
-    }
-    
-    .tooltip {
-      position: absolute;
-      right: 70px;
-      background: #0D1B2A;
-      color: #FAD266;
-      padding: 8px 15px;
-      border-radius: 5px;
-      font-size: 14px;
-      white-space: nowrap;
-      visibility: hidden;
-      opacity: 0;
-      transition: all 0.3s;
-      font-family: 'Poppins', sans-serif;
-    }
-    
-    .tooltip:after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 100%;
-      margin-top: -5px;
-      border-width: 5px;
-      border-style: solid;
-      border-color: transparent transparent transparent #0D1B2A;
-    }
-    
-    .whatsapp-icon:hover .tooltip {
-      visibility: visible;
-      opacity: 1;
-      right: 75px;
-    }
-    
-    @media (max-width: 768px) {
-      .portfolio-header {
-        padding: 30px 20px;
-      }
-      
-      .portfolio-header h1 {
-        font-size: 2rem;
-      }
-      
-      .portfolio-section {
-        padding: 30px 20px;
-      }
-      
-      .contact-badges {
-        flex-direction: column;
-        align-items: center;
-      }
-      
-      .contact-badge {
-        width: 100%;
-        justify-content: center;
-      }
-
-      /* Ajustes para mobile no WhatsApp */
-      .whatsapp-float {
-        bottom: 20px;
-        right: 20px;
-      }
-      
-      .whatsapp-icon {
-        width: 50px;
-        height: 50px;
-        font-size: 25px;
-      }
-    }
-  </style>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/port.css">
 </head>
 <body class="portfolio-page">
   <div class="portfolio-container">
     <!-- Cabeçalho -->
     <header class="portfolio-header">
-      <img src="https://lafrattajr.com.br/imgs/profile.png" alt="Marcos Lafratta Jr" class="profile-image">
+      <img src="https://lafrattajr.com.br/imgs/profile.png" alt="Marcos Lafratta Jr - Corretor de Imóveis em João Pessoa" class="profile-image" loading="lazy">
       <h1>Marcos Lafratta Jr.</h1>
       <h2>Consultor Estratégico em Negócios | Corretor de Imóveis - CRECI PB 17102-F</h2>
       
@@ -332,28 +49,29 @@
         <a href="mailto:marcos@lafrattajr.com" class="contact-badge">
           <i class="fas fa-envelope"></i> marcos@lafrattajr.com
         </a>
-        <a href="https://wa.me/5583993578751" class="contact-badge" target="_blank">
+        <a href="https://wa.me/5583993578751" class="contact-badge" target="_blank" rel="noopener noreferrer">
           <i class="fab fa-whatsapp"></i> (83) 9.9357-8751
         </a>
-        <a href="https://linkedin.com/in/lafrattajr" class="contact-badge" target="_blank">
+        <a href="https://linkedin.com/in/lafrattajr" class="contact-badge" target="_blank" rel="noopener noreferrer">
           <i class="fab fa-linkedin"></i> LinkedIn
         </a>
-        <a href="https://instagram.com/lafrattajr" class="contact-badge" target="_blank">
+        <a href="https://instagram.com/lafrattajr" class="contact-badge" target="_blank" rel="noopener noreferrer">
           <i class="fab fa-instagram"></i> @lafrattajr
         </a>
       </div>
     </header>
     
     <!-- Seção Sobre Mim -->
-    <section class="portfolio-section">
+    <section class="portfolio-section" aria-label="Sobre Marcos Lafratta Jr">
       <h2 class="section-title">Sobre mim</h2>
-      <p>Sou Consultor Estratégico em Negócios, atuando no cruzamento entre <strong>marketing digital, inteligência de dados</strong> e o <strong>mercado imobiliário</strong>, onde sou <strong>Corretor de Imóveis credenciado (CRECI PB 17102-F)</strong>. Minha missão é transformar desafios em resultados concretos, unindo estratégia, execução e foco em performance.</p>
-      <p>Trago uma bagagem sólida em <strong>logística e operações</strong>, com histórico em empresas como <strong>Cargolift Logística S.A.</strong> e <strong>Tede Transportes</strong>, onde atuei como <strong>Supervisor e Gerente Operacional</strong>, liderando processos complexos e entregando resultados mensuráveis.</p>
-      <p>Atualmente, integro minha vivência executiva com soluções digitais e atuação imobiliária, com foco em <strong>captação de leads, marketing de performance, funis de vendas e automação comercial</strong>.</p>
+      <p>Sou Consultor Estratégico em Negócios, atuando no cruzamento entre <strong>marketing digital, inteligência de dados</strong> e o <strong>mercado imobiliário</strong>, onde sou <strong>Corretor de Imóveis credenciado (CRECI PB 17102-F)</strong>.</p>
+	    <br><p>Minha missão é transformar desafios em resultados concretos, unindo estratégia, execução e foco em performance.</p>
+      <br><p>Trago uma bagagem sólida em <strong>logística e operações</strong>, com histórico em empresas como <strong>Cargolift Logística S.A.</strong> e <strong>Tede Transportes</strong>, onde atuei como <strong>Supervisor e Gerente Operacional</strong>, liderando processos complexos e entregando resultados mensuráveis.</p>
+      <br><p>Atualmente, integro minha vivência executiva com soluções digitais e atuação imobiliária, com foco em <strong>captação de leads, marketing de performance, funis de vendas e automação comercial</strong>.</p>
     </section>
     
     <!-- Seção Competências -->
-    <section class="portfolio-section">
+    <section class="portfolio-section" aria-label="Competências profissionais">
       <h2 class="section-title">Competências-Chave</h2>
       <div class="competencies-grid">
         <div class="competency-card">
@@ -384,7 +102,7 @@
     </section>
     
     <!-- Seção Experiência -->
-    <section class="portfolio-section">
+    <section class="portfolio-section" aria-label="Experiência profissional">
       <h2 class="section-title">Experiências Profissionais</h2>
       
       <div class="experience-item">
@@ -398,7 +116,7 @@
       
       <div class="experience-item">
         <div class="experience-header">
-          <h3 class="experience-title">Estrategista Digital</h3>
+          <h3 class="experience-title">Estrategista Digital | Social Media</h3>
           <span class="experience-date">Janeiro 2025 - Atual</span>
         </div>
         <h4 class="experience-company">Freelance - João Pessoa, PB</h4>
@@ -419,13 +137,13 @@
           <h3 class="experience-title">Supervisor de Operações</h3>
           <span class="experience-date">Fevereiro 2015 - Julho 2018</span>
         </div>
-        <h4 class="experience-company">Cargolift Logística S.A. - São Paulo, SP</h4>
-        <p>Gestão de processos logísticos multimodais, WMS, Milk Run, Cross-Docking e controle de custos operacionais em escala nacional.</p>
+        <h4 class="experience-company">Cargolift Logística S.A. - Vinhedo, SP</h4>
+        <p>Gestão de processos logísticos multimodais, WMS, Milk Run, Cross-Docking, Line Haul e controle de custos operacionais.</p>
       </div>
     </section>
     
     <!-- Seção Formação -->
-    <section class="portfolio-section">
+    <section class="portfolio-section" aria-label="Formação acadêmica">
       <h2 class="section-title">Formação Acadêmica</h2>
       
       <div class="experience-item">
@@ -456,82 +174,79 @@
     </section>
     
     <!-- Seção Projetos -->
-    <section class="portfolio-section">
+    <section class="portfolio-section" aria-label="Projetos conectados">
       <h2 class="section-title">Projetos Conectados</h2>
       <div class="projects-grid">
         <div class="project-card">
-          <h3 class="project-title"><i class="fas fa-home"></i> Corretor de Imóveis</h3>
+          <h3 class="project-title"><i class="fas fa-home" aria-hidden="true"></i> Corretor de Imóveis</h3>
           <p>Landing Page profissional para atuação como corretor de imóveis em João Pessoa.</p>
-          <a href="https://corretor.lafrattajr.com" class="project-link" target="_blank">Visitar Site →</a>
+          <a href="https://corretor.lafrattajr.com" class="project-link" target="_blank" rel="noopener noreferrer">Visitar Site →</a>
         </div>
         
         <div class="project-card">
-          <h3 class="project-title"><i class="fas fa-hand-holding-usd"></i> Minha Casa Minha Vida</h3>
+          <h3 class="project-title"><i class="fas fa-hand-holding-usd" aria-hidden="true"></i> Minha Casa Minha Vida</h3>
           <p>Página especializada no programa habitacional MCMV com captação de leads.</p>
-          <a href="https://mcmv.lafrattajr.com" class="project-link" target="_blank">Visitar Site →</a>
+          <a href="https://mcmv.lafrattajr.com" class="project-link" target="_blank" rel="noopener noreferrer">Visitar Site →</a>
         </div>
         
         <div class="project-card">
-          <h3 class="project-title"><i class="fas fa-chart-line"></i> Investimentos Imobiliários</h3>
+          <h3 class="project-title"><i class="fas fa-chart-line" aria-hidden="true"></i> Investimentos Imobiliários</h3>
           <p>Plataforma para captação de leads para investidores imobiliários.</p>
-          <a href="https://investimento.lafrattajr.com" class="project-link" target="_blank">Visitar Site →</a>
+          <a href="https://investimento.lafrattajr.com" class="project-link" target="_blank" rel="noopener noreferrer">Visitar Site →</a>
         </div>
         
         <div class="project-card">
-          <h3 class="project-title"><i class="fas fa-laptop-code"></i> Soluções Digitais</h3>
+          <h3 class="project-title"><i class="fas fa-laptop-code" aria-hidden="true"></i> Soluções Digitais</h3>
           <p>Ofertas e serviços tech para digitalização de negócios.</p>
-          <a href="https://solucoes.lafrattajr.com" class="project-link" target="_blank">Visitar Site →</a>
+          <a href="https://solucoes.lafrattajr.com" class="project-link" target="_blank" rel="noopener noreferrer">Visitar Site →</a>
         </div>
       </div>
     </section>
     
-    <!-- CTA Final -->
-    <section class="cta-section">
-      <h2>Transforme seu desafio em uma oportunidade concreta</h2>
-      <p>Se você busca soluções imobiliárias com visão estratégica, inovação e foco em resultados, entre em contato.</p>
-      <a href="https://wa.me/5583993578751" class="cta-button" target="_blank">
-        <i class="fab fa-whatsapp"></i> Fale Comigo pelo WhatsApp
-      </a>
-    </section>
+  <!-- CTA Final -->
+  <section class="cta-section" aria-label="Chamada para ação">
+    <h2>Transforme seu desafio em uma oportunidade concreta</h2>
+    <p>Se você busca soluções imobiliárias com visão estratégica, inovação e foco em resultados, entre em contato.</p>
+    <a href="https://wa.me/5583993578751" class="cta-button" target="_blank" rel="noopener noreferrer">
+      Fale Comigo pelo WhatsApp
+    </a>
+  </section>
   </div>
 
   <!-- Botão do WhatsApp Flutuante -->
   <div id="whatsappBtn" class="whatsapp-float">
-    <a href="https://wa.me/5583993578751" target="_blank" class="whatsapp-icon">
-      <i class="fab fa-whatsapp"></i>
-      <span class="tooltip">Fale comigo!</span>
+    <a href="https://wa.me/5583993578751" target="_blank" class="whatsapp-icon" rel="noopener noreferrer" aria-label="Contato via WhatsApp">
+
     </a>
   </div>
 
-  <!-- Scripts -->
-  <script>
-    // Efeito de carregamento suave
-    document.body.style.opacity = '0';
-    setTimeout(() => {
-      document.body.style.transition = 'opacity 0.5s ease';
-      document.body.style.opacity = '1';
-    }, 100);
 
-    // Controle do botão do WhatsApp
-    document.addEventListener('DOMContentLoaded', function() {
-      const whatsappBtn = document.getElementById('whatsappBtn');
-      
-      // Mostra o botão após rolagem ou timeout
-      function showWhatsAppButton() {
-        if (window.scrollY > 200) {
-          whatsappBtn.style.opacity = '1';
-          whatsappBtn.style.transform = 'translateY(0)';
-        }
-      }
-      
-      window.addEventListener('scroll', showWhatsAppButton);
-      
-      // Mostra após 3 segundos mesmo sem scroll
-      setTimeout(() => {
-        whatsappBtn.style.opacity = '1';
-        whatsappBtn.style.transform = 'translateY(0)';
-      }, 3000);
-    });
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Marcos Lafratta Jr",
+    "jobTitle": "Corretor de Imóveis e Consultor Estratégico",
+    "url": "https://lafrattajr.com.br",
+    "sameAs": [
+      "https://linkedin.com/in/lafrattajr",
+      "https://instagram.com/lafrattajr"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "João Pessoa",
+      "addressRegion": "PB"
+    },
+    "hasOccupation": {
+      "@type": "Occupation",
+      "name": "Corretor de Imóveis",
+      "credentials": "CRECI PB 17102-F"
+    }
+  }
   </script>
+
+  <!-- JavaScript -->
+  <script src="js/port.js"></script>
 </body>
 </html>
