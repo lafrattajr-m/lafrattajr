@@ -1,3 +1,4 @@
+
 :root {
   /* Cores Lafratta Jr Premium */
   --navy-dark: #0D1B2A;
@@ -11,12 +12,9 @@
   --dark-green: #2E7D32;
   --whatsapp-green: #25D366;
   --whatsapp-dark: #128C7E;
-
-  /* Transições */
   --transition: all 0.3s ease;
 }
 
-/* Reset e Estilos Base */
 * {
   margin: 0;
   padding: 0;
@@ -35,10 +33,26 @@ body {
   line-height: 1.6;
 }
 
-/* Layout Principal */
 .portfolio-page {
   padding: 40px 20px;
   min-height: 100vh;
+  background-color: #F5F5F5;
+  background-image: url('../imgs/bg_jampa.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.portfolio-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(13, 27, 42, 0.5);
+  z-index: -1;
 }
 
 .portfolio-container {
@@ -50,7 +64,6 @@ body {
   overflow: hidden;
 }
 
-/* Cabeçalho */
 .portfolio-header {
   background: linear-gradient(135deg, var(--navy-dark) 0%, var(--water-green) 100%);
   color: white;
@@ -82,7 +95,6 @@ body {
   opacity: 0.9;
 }
 
-/* Badges de Contato */
 .contact-badges {
   display: flex;
   justify-content: center;
@@ -110,7 +122,6 @@ body {
   transform: translateY(-3px);
 }
 
-/* Seções */
 .portfolio-section {
   padding: 40px;
   border-bottom: 1px solid var(--beige-light);
@@ -138,7 +149,6 @@ body {
   background: var(--gold-accent);
 }
 
-/* Grid de Competências */
 .competencies-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -158,7 +168,6 @@ body {
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* Experiência Profissional */
 .experience-item {
   margin-bottom: 30px;
 }
@@ -187,7 +196,6 @@ body {
   margin-bottom: 8px;
 }
 
-/* Projetos */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -229,7 +237,6 @@ body {
   color: var(--navy-dark);
 }
 
-/* CTA */
 .cta-section {
   text-align: center;
   padding: 40px;
@@ -255,7 +262,6 @@ body {
   transform: translateY(-3px);
 }
 
-/* WhatsApp Float */
 .whatsapp-float {
   position: fixed;
   bottom: 30px;
@@ -274,7 +280,7 @@ body {
   width: 60px;
   height: 60px;
   background-color: var(--whatsapp-green);
-  background-image: url('../imgs/icon-whatsapp_clean.png'); /* ajuste o caminho se necessário */
+  background-image: url('../imgs/icon-whatsapp_clean.png');
   background-size: 60%;
   background-position: center;
   background-repeat: no-repeat;
@@ -283,16 +289,13 @@ body {
   transition: var(--transition);
 }
 
-/* CORREÇÃO DO PROBLEMA AO PASSAR O MOUSE */
 .whatsapp-icon:hover {
-  background-color: var(--whatsapp-dark); /* escurece, sem remover imagem */
-  transform: scale(1.1); /* leve aumento sem sumir a imagem */
-  background-image: url('../imgs/icon-whatsapp_clean.png'); /* reforça o ícone visível */
+  background-color: var(--whatsapp-dark);
+  transform: scale(1.1);
+  background-image: url('../imgs/icon-whatsapp_clean.png');
   background-size: 70%;
   background-position: center;
   background-repeat: no-repeat;
-}
-
 }
 
 .tooltip {
@@ -327,25 +330,24 @@ body {
   right: 75px;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
   .portfolio-header {
     padding: 30px 20px;
   }
-  
+
   .portfolio-header h1 {
     font-size: 2rem;
   }
-  
+
   .portfolio-section {
     padding: 30px 20px;
   }
-  
+
   .contact-badges {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .contact-badge {
     width: 100%;
     justify-content: center;
@@ -355,11 +357,15 @@ body {
     bottom: 20px;
     right: 20px;
   }
-  
+
   .whatsapp-icon {
     width: 50px;
     height: 50px;
     font-size: 25px;
+  }
+
+  .portfolio-container {
+    width: 95%;
   }
 }
 
@@ -368,32 +374,8 @@ body {
     transition: none !important;
     animation: none !important;
   }
-  
+
   html {
     scroll-behavior: auto;
   }
-}
-.portfolio-page {
-  background-color: #F5F5F5;
-  background-image: url('../imgs/bg_jampa.png');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  position: relative;
-}
-
-.portfolio-page::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(13, 27, 42, 0.5);
-  z-index: -1;
-}
-
-.portfolio-container {
-  background-color: white;
-  /* Restante do seu CSS existente */
 }
