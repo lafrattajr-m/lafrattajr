@@ -1,161 +1,297 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkTree Oficial | Marcos Lafratta Jr | Site em Desenvolvimento - Conecte-se!</title>
+    <link rel="icon" href="https://lafrattajr.com.br/imgs/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&family=Josefin+Sans:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --navy-dark: #061F28;
+            --white: #FFFFFF;
+            --light-gray: #C0C5C9;
+            --gold-primary: #F5B918;
+            --orange-accent: #A62F03;
+            --whatsapp-green: #25D366;
+            --whatsapp-dark: #128C7E;
+            --transition: all 0.3s ease-in-out;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            height: 100%;
+        }
 
-  <title>Lafratta Jr | LinkTree Oficial</title>
-  <meta name="description" content="Descubra o universo Lafratta Jr: imóveis em João Pessoa (MCMV e investimentos na planta), soluções digitais personalizadas, humor com Mamulesco e aventuras em Viagem Cômica. Conecte-se!"/>
+        body {
+            font-family: 'Josefin Sans', sans-serif;
+            color: var(--navy-dark);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+            background-color: var(--navy-dark);
+            background-image: url('https://lafrattajr.com.br/imgs/bg_jampa.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .main-wrapper {
+            flex: 1;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
 
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="https://lafrattajr.com.br/imgs/favicon.png" type="image/png" />
+        .main-container {
+            flex: 1 0 auto;
+            width: 100%;
+            max-width: 700px;
+            background-color: var(--white);
+            padding: 40px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .profile-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--gold-primary);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 15px;
+        }
+        
+        h1 {
+            font-family: 'Exo 2', sans-serif;
+            font-weight: 700;
+            color: var(--gold-primary);
+            margin: 0;
+            font-size: 2.8em;
+        }
+        
+        .subtitle {
+            font-family: 'Josefin Sans', sans-serif;
+            color: var(--navy-dark);
+            font-size: 1.2em;
+            margin-top: 5px;
+            opacity: 0.9;
+        }
+        
+        .message {
+            font-family: 'Exo 2', sans-serif;
+            font-weight: 400;
+            font-size: 1.8em;
+            margin: 30px 0;
+            color: var(--navy-dark);
+        }
+        
+        .logo-container {
+            margin: 20px 0;
+        }
 
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&family=Josefin+Sans:wght@400&display=swap" rel="stylesheet"/>
+        .logo-principal {
+            max-width: 250px;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            transition: var(--transition);
+            /* FORÇA O LOGO BRANCO (INVERTIDO) NO DESKTOP */
+            filter: brightness(0) invert(1);
+        }
+        
+        .contact-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+        }
 
-  <meta property="og:image" content="https://lafrattajr.com.br/imgs/preview-lafrattajr.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Marcos Lafratta Jr - Especialista em Soluções Integradas em João Pessoa">
-  <meta property="og:title" content="Marcos Lafratta Jr | Soluções Imobiliárias e Consultoria Digital">
-  <meta property="og:description" content="Encontre as melhores oportunidades em imóveis em João Pessoa e soluções digitais personalizadas para alavancar seu negócio.">
-  <meta property="og:url" content="https://lafrattajr.com">
-  <meta property="og:type" content="website">
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 350px;
+            margin: 0 auto;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1em;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-btn i {
+            margin-right: 10px;
+            font-size: 1.3em;
+        }
+
+        .whatsapp-btn {
+            background-color: var(--whatsapp-green);
+            color: white;
+            border: 2px solid var(--whatsapp-green);
+        }
+        
+        .whatsapp-btn:hover {
+            background-color: var(--whatsapp-dark);
+            border-color: var(--whatsapp-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .email-btn {
+            background-color: var(--orange-accent);
+            color: white;
+            border: 2px solid var(--orange-accent);
+        }
+
+        .email-btn:hover {
+            background-color: var(--navy-dark);
+            border-color: var(--navy-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        footer {
+            flex-shrink: 0;
+            background-color: var(--navy-dark);
+            color: var(--light-gray);
+            text-align: center;
+            padding: 15px 20px;
+            width: 100%;
+            font-size: 0.9em;
+        }
+
+        footer p {
+            margin: 0;
+            color: var(--light-gray);
+        }
+        
+        /* Desktop Styles */
+        @media (min-width: 769px) {
+            .main-container {
+                border-radius: 12px;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+                margin: 40px auto;
+            }
+        }
+        
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            body {
+                background: var(--white);
+                background-image: none;
+            }
+            
+            .main-container {
+                padding: 30px 20px;
+                margin: 0;
+                border-radius: 0;
+                box-shadow: none;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .subtitle {
+                font-size: 1em;
+            }
+            
+            .message {
+                font-size: 1.3em;
+                margin: 20px 0;
+            }
+
+            .profile-img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .logo-principal {
+                /* REMOVE O FILTRO PARA MOSTRAR O LOGO ORIGINAL (PRETO) NO MOBILE */
+                filter: brightness(0) invert(0);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-container {
+                padding: 25px 15px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            .message {
+                font-size: 1.1em;
+            }
+            .contact-btn {
+                font-size: 1em;
+                padding: 12px 20px;
+            }
+            .contact-btn i {
+                font-size: 1.1em;
+            }
+            footer {
+                padding: 10px 15px;
+                font-size: 0.8em;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header class="profile-header"> <img src="imgs/profile.png" alt="Foto de perfil de Marcos Lafratta Jr, Corretor de Imóveis e Empreendedor Digital" class="profile-image-common"> <h1>Marcos Lafratta Jr</h1>
-    <p>Corretor de Imóveis & Empreendedor Digital <br> João Pessoa - PB</p>
-  </header>
+    <div class="main-wrapper">
+        <div class="main-container">
+            <div class="profile-section">
+                <img src="https://lafrattajr.com.br/imgs/profile.png" alt="Marcos Lafratta Jr" class="profile-img">
+                <h1>Marcos Lafratta Jr</h1>
+                <p class="subtitle">Corretor de Imóveis & Empreendedor Digital
+                    <br>João Pessoa - PB</br></p>
+            </div>
+            
+            <p class="message">Estamos em desenvolvimento para trazer o melhor conteúdo e soluções para você!</p>
 
-  <main class="tree-container">
+            <div class="logo-container">
+                <img src="https://lafrattajr.com.br/imgs/logo-principal.png" alt="Lafratta Jr Logo" class="logo-principal">
+            </div>
 
-    <details class="tree-group" open>
-      <summary class="tree-main-link">
-        <span><img src="imgs/profile_2.png" alt="Logo Corretor de Imóveis" class="main-icon"> Corretor de Imóveis</span>
-        <span class="toggle-icon">−</span>
-      </summary>
-      <div class="tree-description">
-        Corretor Lafratta Jr | Venda e locação de imóveis em João Pessoa - PB, MCMV e Investimentos Imobiliários.
-      </div>
-      <div class="tree-sublinks">
-        <a href="https://lafrattajr.com" class="tree-sublink" target="_blank">
-          <img src="imgs/icon-corretor.png" alt="Ícone de globo"> Acesse o Site
-        </a>
-        <a href="https://mcmv.lafrattajr.com" class="tree-sublink" target="_blank">
-          <img src="imgs/icon-mcmv.png" alt="Ícone de casa"> Minha Casa, Minha Vida (MCMV)
-        </a>
-        <a href="https://investimento.lafrattajr.com" class="tree-sublink" target="_blank">
-          <img src="imgs/icon-invest.png" alt="Ícone de gráfico"> Investimentos Imobiliários
-        </a>
-        <a href="https://instagram.com/corretor.lafrattajr" class="tree-sublink" target="_blank">
-          <img src="imgs/icon-instagram.png" alt="Ícone do Instagram"> Instagram
-        </a>
-        <a href="https://facebook.com/corretor.lafrattajr" class="tree-sublink" target="_blank">
-          <img src="imgs/icon-facebook.png" alt="Ícone do Facebook"> Facebook
-        </a>
-        <a href="https://youtube.com/@corretor.lafrattajr" class="tree-sublink" target="_blank">
-          <img src="imgs/icon-youtube.png" alt="Ícone do YouTube"> YouTube
-        </a>
-      </div>
-    </details>
+            <div class="contact-options">
+                <a href="https://wa.me/5583993578751" class="contact-btn whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> WhatsApp: (83) 9.9357-8751
+                </a>
+                <a href="mailto:marcos@lafrattajr.com" class="contact-btn email-btn">
+                    <i class="fas fa-envelope"></i> marcos@lafrattajr.com
+                </a>
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; <span id="year"></span> Marcos Lafratta Jr - Todos os direitos reservados</p>
+        </footer>
+    </div>
 
-    <details class="tree-group">
-      <summary class="tree-main-link">
-        <span><img src="imgs/icon-solucoes.png" alt="Logo Soluções Lafratta Jr" class="main-icon"> Soluções Digitais</span>
-        <span class="toggle-icon">+</span>
-      </summary>
-      <div class="tree-description">
-        Lafratta Jr | Soluções Digitais: Social Media, Marketing digital, consultoria e automações para sua digitalização multissetorial.
-      </div>
-      <div class="tree-sublinks">
-        <a href="https://solucoes.lafrattajr.com" class="tree-sublink" target="_blank">
-          <img src="imgs/icon-solucoes.png" alt="Ícone de globo"> Acesse o Site
-        </a>
-        <a href="https://instagram.com/solucoes.lafrattajr" class="tree-sublink" target="_blank">
-          <img src="imgs/icon-instagram.png" alt="Ícone do Instagram"> Instagram
-        </a>
-        <a href="https://facebook.com/solucoes.lafrattajr" class="tree-sublink" target="_blank">
-          <img src="imgs/icon-facebook.png" alt="Ícone do Facebook"> Facebook
-        </a>
-      </div>
-    </details>
-
-    <details class="tree-group">
-      <summary class="tree-main-link">
-        <span><img src="imgs/icon-mamulesco.png" alt="Logo Mamulesco" class="main-icon"> Mamulesco AI</span>
-        <span class="toggle-icon">+</span>
-      </summary>
-      <div class="tree-description">
-        Mamulesco AI | Seu Bot Folclórico: Humor nonsense, personagens e críticas em forma de piada. Converse com a IA mais maluca do sertão!
-      </div>
-      <div class="tree-sublinks">
-        <a href="https://mamulesco.com.br" class="tree-sublink" target="_blank">
-          <img src="imgs/icon-mamulesco.png" alt="Ícone de globo"> Acesse o Site
-        </a>
-        <a href="https://aistudio.instagram.com/ai/598362659981971" class="tree-sublink" target="_blank">
-          <img src="imgs/icon-tilasco.png" alt="Ícone de globo"> Chat Boot: Tilasco.AI
-        </a>
-        <a href="https://instagram.com/mamulesco" class="tree-sublink" target="_blank">
-          <img src="imgs/icon-instagram.png" alt="Ícone do Instagram"> Instagram
-        </a>
-        <a href="https://facebook.com/mamulesco" class="tree-sublink" target="_blank">
-          <img src="imgs/icon-facebook.png" alt="Ícone do Facebook"> Facebook
-        </a>
-        <a href="https://youtube.com/@mamulesco" class="tree-sublink" target="_blank">
-          <img src="imgs/icon-youtube.png" alt="Ícone do YouTube"> YouTube
-        </a>
-        <a href="https://tiktok.com/@mamulesco" class="tree-sublink" target="_blank">
-          <img src="imgs/icon-tiktok.png" alt="Ícone do TikTok"> TikTok
-        </a>
-      </div>
-    </details>
-
-    <details class="tree-group">
-      <summary class="tree-main-link">
-        <span><img src="imgs/icon-viagem.png" alt="Logo Viagem Cômica" class="main-icon"> Viagem Cômica</span>
-        <span class="toggle-icon">+</span>
-      </summary>
-      <div class="tree-description">
-        Viagem Cômica | Humor sem escalas: Humor com viagens fictícias e sátiras culturais.
-      </div>
-      <div class="tree-sublinks">
-        <a href="https://viagemcomica.com.br" class="tree-sublink" target="_blank">
-          <img src="imgs/icon-viagem.png" alt="Ícone de globo"> Acesse o Site
-        </a>
-        <a href="https://instagram.com/viagemcomica" class="tree-sublink" target="_blank">
-          <img src="imgs/icon-instagram.png" alt="Ícone do Instagram"> Instagram
-        </a>
-        <a href="https://facebook.com/viagemcomica" class="tree-sublink" target="_blank">
-          <img src="imgs/icon-facebook.png" alt="Ícone do Facebook"> Facebook
-        </a>
-        <a href="https://youtube.com/@viagemcomica" class="tree-sublink" target="_blank">
-          <img src="imgs/icon-youtube.png" alt="Ícone do YouTube"> YouTube
-        </a>
-        <a href="https://tiktok.com/@viagemcomica" class="tree-sublink" target="_blank">
-          <img src="imgs/icon-tiktok.png" alt="Ícone do TikTok"> TikTok
-        </a>
-      </div>
-    </details>
-
-    <a href="https://lafrattajr.com.br/portfolio" class="tree-main-link solo" target="_blank">
-      <span><img src="imgs/icon-portfolio.png" alt="Logo Portfólio Profissional" class="main-icon"> Portfólio Profissional</span>
-    </a>
-
-    <a href="mailto:marcos@lafrattajr.com" class="tree-main-link solo" target="_blank">
-      <span><img src="imgs/icon-mail.png" alt="Logo E-mail" class="main-icon"> Contato por E-mail</span>
-    </a>
-
-    <a href="https://api.whatsapp.com/send?phone=5583993578751" class="tree-main-link solo" target="_blank">
-      <span><img src="imgs/icon-whatsapp.png" alt="Logo WhatsApp" class="main-icon"> WhatsApp: (83) 9.9357-8751</span>
-    </a>
-  </main>
-
-  <footer class="footer">
-    <p>Universo: Marcos Lafratta Junior</p>
-    <p>© <span id="year"></span> Lafratta Jr | CRECI 17102-F</p>
-  </footer>
-
-  <script src="js/script.js"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
