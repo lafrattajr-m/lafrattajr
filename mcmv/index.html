@@ -3,295 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Casa, Minha Vida | Marcos Lafratta Jr | Site em Desenvolvimento - Conecte-se!</title>
-    <link rel="icon" href="https://lafrattajr.com.br/imgs/favicon.png" type="image/png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Minha Casa Minha Vida 2025 João Pessoa | Subsídio e Financiamento | Lafratta Jr</title>
+    <meta name="description" content="Conquiste sua casa própria em João Pessoa e Região com o Minha Casa Minha Vida 2025. Descubra as novas regras, faixas de renda, subsídios e financiamento facilitado para sair do aluguel. Fale com um corretor credenciado e realize seu sonho!">
+    <meta name="keywords" content="Minha Casa Minha Vida 2025, MCMV João Pessoa, financiamento imobiliário, casa própria João Pessoa, subsídio MCMV, regras MCMV 2025, faixas de renda MCMV, comprar imóvel João Pessoa, sair do aluguel, corretor de imóveis João Pessoa, Marcos Lafratta Jr, imóveis Região, apartamento MCMV, juros reduzidos, programa habitacional, Caixa Econômica Federal">
+    <link rel="canonical" href="https://lafrattajr.com.br/mcmv"> <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&family=Josefin+Sans:wght@400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        :root {
-            --navy-dark: #061F28;
-            --white: #FFFFFF;
-            --light-gray: #C0C5C9;
-            --gold-primary: #F5B918;
-            --orange-accent: #A62F03;
-            --whatsapp-green: #25D366;
-            --whatsapp-dark: #128C7E;
-            --transition: all 0.3s ease-in-out;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        html {
-            height: 100%;
-        }
-
-        body {
-            font-family: 'Josefin Sans', sans-serif;
-            color: var(--navy-dark);
-            line-height: 1.6;
-            display: flex;
-            flex-direction: column;
-            min-height: 100%;
-            background-color: var(--navy-dark);
-            background-image: url('https://lafrattajr.com.br/imgs/bg_jampa.png');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-        
-        .main-wrapper {
-            flex: 1;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .main-container {
-            flex: 1 0 auto;
-            width: 100%;
-            max-width: 700px;
-            background-color: var(--white);
-            padding: 40px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        
-        .profile-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 30px;
-        }
-        
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid var(--gold-primary);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            margin-bottom: 15px;
-        }
-        
-        h1 {
-            font-family: 'Exo 2', sans-serif;
-            font-weight: 700;
-            color: var(--gold-primary);
-            margin: 0;
-            font-size: 2.8em;
-        }
-        
-        .subtitle {
-            font-family: 'Josefin Sans', sans-serif;
-            color: var(--navy-dark);
-            font-size: 1.2em;
-            margin-top: 5px;
-            opacity: 0.9;
-        }
-        
-        .message {
-            font-family: 'Exo 2', sans-serif;
-            font-weight: 400;
-            font-size: 1.8em;
-            margin: 30px 0;
-            color: var(--navy-dark);
-        }
-        
-        .logo-container {
-            margin: 20px 0;
-        }
-
-        .logo-principal {
-            max-width: 250px;
-            width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-            transition: var(--transition);
-            /* FORÇA O LOGO BRANCO (INVERTIDO) NO DESKTOP */
-            filter: brightness(0) invert(1);
-        }
-        
-        .contact-options {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-top: 30px;
-        }
-
-        .contact-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            max-width: 350px;
-            margin: 0 auto;
-            padding: 15px 25px;
-            border-radius: 50px;
-            font-weight: bold;
-            font-size: 1.1em;
-            text-decoration: none;
-            transition: var(--transition);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        
-        .contact-btn i {
-            margin-right: 10px;
-            font-size: 1.3em;
-        }
-
-        .whatsapp-btn {
-            background-color: var(--whatsapp-green);
-            color: white;
-            border: 2px solid var(--whatsapp-green);
-        }
-        
-        .whatsapp-btn:hover {
-            background-color: var(--whatsapp-dark);
-            border-color: var(--whatsapp-dark);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        .email-btn {
-            background-color: var(--orange-accent);
-            color: white;
-            border: 2px solid var(--orange-accent);
-        }
-
-        .email-btn:hover {
-            background-color: var(--navy-dark);
-            border-color: var(--navy-dark);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-        }
-        
-        footer {
-            flex-shrink: 0;
-            background-color: var(--navy-dark);
-            color: var(--light-gray);
-            text-align: center;
-            padding: 15px 20px;
-            width: 100%;
-            font-size: 0.9em;
-        }
-
-        footer p {
-            margin: 0;
-            color: var(--light-gray);
-        }
-        
-        /* Desktop Styles */
-        @media (min-width: 769px) {
-            .main-container {
-                border-radius: 12px;
-                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-                margin: 40px auto;
-            }
-        }
-        
-        /* Mobile Styles */
-        @media (max-width: 768px) {
-            body {
-                background: var(--white);
-                background-image: none;
-            }
-            
-            .main-container {
-                padding: 30px 20px;
-                margin: 0;
-                border-radius: 0;
-                box-shadow: none;
-            }
-            
-            h1 {
-                font-size: 2em;
-            }
-            
-            .subtitle {
-                font-size: 1em;
-            }
-            
-            .message {
-                font-size: 1.3em;
-                margin: 20px 0;
-            }
-
-            .profile-img {
-                width: 120px;
-                height: 120px;
-            }
-
-            .logo-principal {
-                /* REMOVE O FILTRO PARA MOSTRAR O LOGO ORIGINAL (PRETO) NO MOBILE */
-                filter: brightness(0) invert(0);
-            }
-        }
-
-        @media (max-width: 480px) {
-            .main-container {
-                padding: 25px 15px;
-            }
-            h1 {
-                font-size: 1.8em;
-            }
-            .message {
-                font-size: 1.1em;
-            }
-            .contact-btn {
-                font-size: 1em;
-                padding: 12px 20px;
-            }
-            .contact-btn i {
-                font-size: 1.1em;
-            }
-            footer {
-                padding: 10px 15px;
-                font-size: 0.8em;
-            }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700;900&family=Poppins:wght@400;500;600;700&family=Lora:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="https://lafrattajr.com.br/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="main-wrapper">
-        <div class="main-container">
-            <div class="profile-section">
-                <img src="https://lafrattajr.com.br/imgs/profile.png" alt="Marcos Lafratta Jr" class="profile-img">
-                <h1>Marcos Lafratta Jr</h1>
-                <p class="subtitle">Corretor de Imóveis & Empreendedor Digital
-                    <br>João Pessoa - PB</br></p>
+    <div class="container">
+        <header class="header">
+            <div class="profile-image">
+                <img src="https://lafrattajr.com.br/imgs/profile_2.png" alt="Marcos Lafratta Jr" width="120" height="120">
             </div>
-            
-            <p class="message">Estamos em desenvolvimento para trazer o melhor conteúdo e soluções para você!</p>
+            <h1>MINHA CASA MINHA VIDA 2025</h1>
+            <div class="title">Seu sonho da casa própria em João Pessoa</div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="contact-icon">📱</span>
+                    <a href="https://wa.me/5583993578751" target="_blank">(83) 9.9357-8751</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">✉️</span>
+                    <a href="mailto:marcos@lafrattajr.com">marcos@lafrattajr.com</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">🏠</span>
+                    <span>João Pessoa - PB</span>
+                </div>
+            </div>
+        </header>
 
-            <div class="logo-container">
-                <img src="https://lafrattajr.com.br/imgs/logo-principal.png" alt="Lafratta Jr Logo" class="logo-principal">
-            </div>
+        <main class="content">
+            <section class="section">
+                <div class="objective">
+                    <p>O <strong>Minha Casa Minha Vida 2025</strong> traz novas regras e oportunidades para você conquistar sua casa própria com condições especiais de financiamento. Como corretor credenciado, te ajudo a navegar por todo o processo em João Pessoa e Região!</p>
+                    <p class="quote">"As regras para 2025 estão ainda mais vantajosas!"</p>
+                </div>
+            </section>
 
-            <div class="contact-options">
-                <a href="https://wa.me/5583993578751" class="contact-btn whatsapp-btn">
-                    <i class="fab fa-whatsapp"></i> WhatsApp: (83) 9.9357-8751
-                </a>
-                <a href="mailto:marcos@lafrattajr.com" class="contact-btn email-btn">
-                    <i class="fas fa-envelope"></i> marcos@lafrattajr.com
-                </a>
+            <section class="section" id="o-que-e">
+                <h2>O QUE É O PROGRAMA MINHA CASA, MINHA VIDA?</h2>
+                <p>O MCMV é uma iniciativa do Governo Federal que oferece condições especiais de financiamento para que famílias de diferentes rendas possam adquirir sua moradia. Gerenciado pela <a href="https://www.caixa.gov.br/voce/habitacao/minha-casa-minha-vida/Paginas/default.aspx" target="_blank">Caixa Econômica Federal</a>, o programa se adapta às suas necessidades, com subsídios e taxas de juros reduzidas.</p>
+            </section>
+
+            <section class="section" id="faixas-de-renda">
+                <h2>FAIXAS DE RENDA E SEUS BENEFÍCIOS EM 2025</h2>
+                <p>As faixas de renda foram atualizadas pela Portaria MCid Nº 399/2025, expandindo o acesso ao programa:</p>
+                <h3>Famílias Urbanas (Renda Bruta Mensal)</h3>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <h3>Faixa 1</h3>
+                        <p>Até R$ 2.850,00</p>
+                        <ul>
+                            <li>Subsídio de até 95%</li>
+                            <li>Juros de 4% a 5% a.a.</li>
+                            <li>Beneficiários do Bolsa Família ou BPC podem ter o imóvel quitado</li>
+                        </ul>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>Faixa 2</h3>
+                        <p>R$ 2.850,01 a R$ 4.700,00</p>
+                        <ul>
+                            <li>Subsídio até R$ 55 mil</li>
+                            <li>Juros de 4,75% a 7% a.a.</li>
+                        </ul>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>Faixa 3</h3>
+                        <p>R$ 4.700,01 a R$ 8.600,00</p>
+                        <ul>
+                            <li>Juros de 7,66% a 8,16% a.a.</li>
+                            <li>Até R$ 350 mil</li>
+                        </ul>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>Faixa 4 (Classe Média)</h3>
+                        <p>R$ 8.600,01 a R$ 12.000,00</p>
+                        <ul>
+                            <li>Juros de 10% a.a.</li>
+                            <li>Até R$ 500 mil</li>
+                            <li>Prazo de financiamento de até 420 meses (35 anos)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        <section class="section" id="vantagens">
+            <h2>VANTAGENS DO MCMV</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <h3>Economia</h3>
+                    <p>Juros reduzidos ou nulos e parcelas que cabem no seu bolso, com subsídios que podem cobrir até 95% do valor do imóvel.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-wheelchair"></i>
+                    <h3>Acessibilidade</h3>
+                    <p>Imóveis adaptáveis para Pessoas com Deficiência (PCD) e idosos, garantindo conforto e mobilidade para toda a família.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Desenvolvimento</h3>
+                    <p>Você realiza seu sonho da casa própria e ainda impulsiona a economia local com empreendimentos de qualidade.</p>
+                </div>
             </div>
-        </div>
-        
-        <footer>
-            <p>&copy; <span id="year"></span> Marcos Lafratta Jr - Todos os direitos reservados</p>
+        </section>
+
+            <!-- ESTÁGIO 1: FORMULÁRIO GOOGLE -->
+            <section class="section stage-section stage-1" id="estagio-1">
+                <div class="stage-header">
+                    <span class="stage-number">1</span>
+                    <h2>COMECE AGORA: PREENCHA O FORMULÁRIO</h2>
+                </div>
+                <div class="stage-content">
+                    <p>Primeiro passo para conquistar sua casa própria! Preencha nosso formulário completo e receba informações personalizadas sobre o MCMV 2025.</p>
+                    <div class="benefits-list">
+                        <div class="benefit-item">✅ Análise gratuita do seu perfil</div>
+                        <div class="benefit-item">✅ E-book exclusivo sobre MCMV 2025</div>
+                        <div class="benefit-item">✅ Lista de empreendimentos disponíveis</div>
+                    </div>
+                    <div class="cta-container">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeHhqWt-nOSsLDKLP6n01MgwK2ypvE9PsB-wX0s6z1OTofcLg/viewform" 
+                           target="_blank" 
+                           class="cta-btn primary-btn">
+                            📋 PREENCHER FORMULÁRIO AGORA
+                        </a>
+                        <p class="cta-subtitle">Leva apenas 3 minutos para preencher</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ESTÁGIO 2: WHATSAPP -->
+            <section class="section stage-section stage-2" id="estagio-2">
+                <div class="stage-header">
+                    <span class="stage-number">2</span>
+                    <h2>TIRE SUAS DÚVIDAS NO WHATSAPP</h2>
+                </div>
+                <div class="stage-content">
+                    <p>Já preencheu o formulário? Agora vamos conversar diretamente! Tire todas as suas dúvidas sobre o programa e os empreendimentos disponíveis.</p>
+                    <div class="benefits-list">
+                        <div class="benefit-item">💬 Atendimento personalizado</div>
+                        <div class="benefit-item">💬 Respostas em tempo real</div>
+                        <div class="benefit-item">💬 Agendamento de visitas</div>
+                    </div>
+                    <div class="cta-container">
+                        <a href="https://wa.me/5583993578751?text=Olá%20Lafratta!%20Preenchi%20o%20formulário%20do%20MCMV%202025%20e%20gostaria%20de%20conversar%20sobre%20as%20opções%20disponíveis." 
+                           target="_blank" 
+                           class="cta-btn whatsapp-btn">
+                            💬 FALAR NO WHATSAPP
+                        </a>
+                        <p class="cta-subtitle">Respondo em até 30 minutos</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ESTÁGIO 3: E-MAIL -->
+            <section class="section stage-section stage-3" id="estagio-3">
+                <div class="stage-header">
+                    <span class="stage-number">3</span>
+                    <h2>RECEBA PROPOSTAS POR E-MAIL</h2>
+                </div>
+                <div class="stage-content">
+                    <p>Para finalizar, envie um e-mail com suas preferências específicas e receba propostas detalhadas dos melhores empreendimentos para o seu perfil.</p>
+                    <div class="benefits-list">
+                        <div class="benefit-item">📧 Propostas personalizadas</div>
+                        <div class="benefit-item">📧 Documentação completa</div>
+                        <div class="benefit-item">📧 Simulações de financiamento</div>
+                    </div>
+                    <div class="cta-container">
+                        <a href="mailto:marcos@lafrattajr.com?subject=Interesse%20no%20MCMV%202025&body=Olá%20Marcos,%0A%0AJá%20preenchi%20o%20formulário%20e%20conversamos%20no%20WhatsApp.%20Gostaria%20de%20receber%20propostas%20detalhadas%20para:%0A%0A-%20Faixa%20de%20renda:%20%0A-%20Região%20de%20interesse:%20%0A-%20Tipo%20de%20imóvel:%20%0A-%20Observações:%20%0A%0AAguardo%20retorno.%0A%0AObrigado!" 
+                           class="cta-btn email-btn">
+                            📧 ENVIAR E-MAIL
+                        </a>
+                        <p class="cta-subtitle">Retorno em até 24 horas</p>
+                    </div>
+                </div>
+            </section>
+
+        <section class="section" id="como-participar">
+            <h2>COMO PARTICIPAR DO MINHA CASA, MINHA VIDA?</h2>
+            <p class="section-subtitle">O processo é simples e transparente:</p>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Inscrição e Cadastro</h3>
+                    <p><strong>Faixa 1 e Beneficiários de Bolsa Família:</strong> Procure a prefeitura da sua cidade, o governo do seu estado ou uma Entidade Organizadora habilitada pelo Ministério das Cidades. Faça sua inscrição no Cadastro Habitacional e mantenha seus dados atualizados no <a href="https://cadunico.cidadania.gov.br/" target="_blank">Cadastro Único (CADUNICO)</a>.</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Validação pela CAIXA</h3>
+                    <p>Após a inscrição, a Caixa Econômica Federal analisa se seus dados e perfil atendem às regras do programa.</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Apresentação de Documentação</h3>
+                    <p>Se selecionado, você será convocado para apresentar a documentação necessária e assinar o contrato.</p>
+                </div>
+            </div>
+        </section>
+
+            <section class="section" id="documentos-necessarios">
+                <h2>DOCUMENTOS NECESSÁRIOS</h2>
+                <ul>
+                    <li>RG e CPF</li>
+                    <li>Comprovante de renda</li>
+                    <li>Comprovante de residência</li>
+                    <li>Certidões negativas</li>
+                    <li>Outros documentos podem ser solicitados pela Caixa Econômica Federal</li>
+                </ul>
+            </section>
+
+            <section class="section urgency-section">
+                <h2>🚨 ÚLTIMAS UNIDADES DISPONÍVEIS!</h2>
+                <p class="urgency-text">Não perca essa oportunidade única! Os empreendimentos do MCMV 2025 em João Pessoa e Região estão com poucas unidades restantes.</p>
+                <div class="urgency-cta">
+                    <a href="#estagio-1" class="cta-btn urgent-btn">GARANTIR MINHA CASA AGORA</a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-info">
+                <p><strong>Marcos Lafratta Jr | CRECI PB 17102-F</strong></p>
+                <p>Venda e Locação – Residencial | Comercial</p>
+                <p>Alto Padrão | MCMV até R$500 mil</p>
+                <p>© <span id="current-year"></span> Todos os direitos reservados</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/lafrattajr/" target="_blank">@lafrattajr</a> | 
+                    <a href="https://www.instagram.com/corretor.lafrattajr/" target="_blank">@corretor.lafrattajr</a>
+                </div>
+                <a href="https://lafrattajr.com.br" target="_blank" class="site-link">lafrattajr.com.br</a>
+            </div>
         </footer>
     </div>
 
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
+
