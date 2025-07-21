@@ -104,6 +104,19 @@
             color: var(--navy-dark);
         }
         
+        .logo-container {
+            margin: 20px 0;
+        }
+        
+        .logo-principal {
+            max-width: 250px;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            transition: var(--transition);
+        }
+        
         .contact-options {
             display: flex;
             flex-direction: column;
@@ -191,6 +204,9 @@
             
             .main-container {
                 padding: 30px 20px;
+                margin: 0;
+                border-radius: 0;
+                box-shadow: none;
             }
             
             h1 {
@@ -209,6 +225,10 @@
             .profile-img {
                 width: 120px;
                 height: 120px;
+            }
+            
+            .logo-principal {
+                max-width: 200px;
             }
         }
 
@@ -246,7 +266,11 @@
             </div>
             
             <p class="message">Estamos em desenvolvimento para trazer o melhor conteúdo e soluções para você!</p>
-                    
+
+            <div class="logo-container">
+                <img src="https://lafrattajr.com.br/imgs/logo-principal.png" alt="Lafratta Jr Logo" class="logo-principal">
+            </div>
+
             <div class="contact-options">
                 <a href="https://wa.me/5583993578751" class="contact-btn whatsapp-btn">
                     <i class="fab fa-whatsapp"></i> WhatsApp: (83) 9.9357-8751
