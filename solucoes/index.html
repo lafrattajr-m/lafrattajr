@@ -28,7 +28,7 @@
             box-sizing: border-box;
         }
         
-        html, body {
+        html {
             height: 100%;
         }
 
@@ -38,6 +38,7 @@
             line-height: 1.6;
             display: flex;
             flex-direction: column;
+            min-height: 100%;
             background-color: var(--navy-dark);
             background-image: url('https://lafrattajr.com.br/imgs/bg_jampa.png');
             background-size: cover;
@@ -45,16 +46,21 @@
             background-attachment: fixed;
         }
         
+        .main-wrapper {
+            flex: 1;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
         .main-container {
             flex: 1 0 auto;
             width: 100%;
             max-width: 700px;
             background-color: var(--white);
             padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            margin: 0 auto;
             text-align: center;
-            margin: 40px auto;
         }
         
         .profile-section {
@@ -167,18 +173,24 @@
             color: var(--light-gray);
         }
         
+        /* Desktop Styles */
+        @media (min-width: 769px) {
+            .main-container {
+                border-radius: 12px;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+                margin: 40px auto;
+            }
+        }
+        
+        /* Mobile Styles */
         @media (max-width: 768px) {
             body {
                 background: var(--white);
-                display: block;
+                background-image: none;
             }
             
             .main-container {
-                margin: 0;
                 padding: 30px 20px;
-                border-radius: 0;
-                box-shadow: none;
-                min-height: 100vh;
             }
             
             h1 {
@@ -225,28 +237,30 @@
     </style>
 </head>
 <body>
-    <div class="main-container">
-        <div class="profile-section">
-            <img src="https://lafrattajr.com.br/imgs/profile.png" alt="Marcos Lafratta Jr" class="profile-img">
-            <h1>Marcos Lafratta Jr</h1>
-            <p class="subtitle">Corretor de Imóveis & Empreendedor Digital | João Pessoa - PB</p>
+    <div class="main-wrapper">
+        <div class="main-container">
+            <div class="profile-section">
+                <img src="https://lafrattajr.com.br/imgs/profile.png" alt="Marcos Lafratta Jr" class="profile-img">
+                <h1>Marcos Lafratta Jr</h1>
+                <p class="subtitle">Corretor de Imóveis & Empreendedor Digital | João Pessoa - PB</p>
+            </div>
+            
+            <p class="message">Estamos em desenvolvimento para trazer o melhor conteúdo e soluções para você!</p>
+                    
+            <div class="contact-options">
+                <a href="https://wa.me/5583993578751" class="contact-btn whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> WhatsApp: (83) 9.9357-8751
+                </a>
+                <a href="mailto:marcos@lafrattajr.com" class="contact-btn email-btn">
+                    <i class="fas fa-envelope"></i> marcos@lafrattajr.com
+                </a>
+            </div>
         </div>
         
-        <p class="message">Estamos em desenvolvimento para trazer o melhor conteúdo e soluções para você!</p>
-                
-        <div class="contact-options">
-            <a href="https://wa.me/5583993578751" class="contact-btn whatsapp-btn">
-                <i class="fab fa-whatsapp"></i> WhatsApp: (83) 9.9357-8751
-            </a>
-            <a href="mailto:marcos@lafrattajr.com" class="contact-btn email-btn">
-                <i class="fas fa-envelope"></i> marcos@lafrattajr.com
-            </a>
-        </div>
+        <footer>
+            <p>&copy; <span id="year"></span> Marcos Lafratta Jr - Todos os direitos reservados</p>
+        </footer>
     </div>
-    
-    <footer>
-        <p>&copy; <span id="year"></span> Marcos Lafratta Jr - Todos os direitos reservados</p>
-    </footer>
 
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
