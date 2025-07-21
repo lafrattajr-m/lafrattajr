@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcos Lafratta Jr | Em Desenvolvimento - Conecte-se!</title>
+    <link rel="icon" href="https://lafrattajr.com.br/imgs/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&family=Josefin+Sans:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Variáveis de Cor (Suas Cores Definidas) */
+        :root {
+            --navy-dark: #061F28;
+            --white: #FFFFFF;
+            --light-gray: #C0C5C9;
+            --gold-primary: #F5B918;
+            --orange-accent: #A62F03;
+            --whatsapp-green: #25D366;
+            --whatsapp-dark: #128C7E;
+            --transition: all 0.3s ease-in-out;
+        }
+        
+        /* Reset Básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Estilos do Corpo */
+        body {
+            font-family: 'Josefin Sans', sans-serif; /* Fonte para textos gerais */
+            background-color: var(--navy-dark); /* Fundo escuro */
+            color: var(--white); /* Cor do texto padrão */
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; /* Centraliza conteúdo verticalmente */
+            min-height: 100vh;
+            padding: 0; /* Remover padding padrão do body */
+            background-image: url('imgs/bg_jampa.png'); /* Imagem de fundo */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+        }
+        
+        /* Overlay para a imagem de fundo */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(6, 31, 40, 0.6); /* Transparência */
+            z-index: -1;
+        }
+
+        /* Container Principal do Conteúdo */
+        .main-container {
+            max-width: 700px; /* Limite de largura para desktop */
+            width: 100%; /* Ocupa 100% da largura disponível */
+            background-color: rgba(255, 255, 255, 0.95); /* Fundo quase branco com leve transparência */
+            padding: 40px;
+            border-radius: 12px; /* Bordas arredondadas para desktop */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+        
+        /* Seção de Perfil */
+        .profile-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--gold-primary); /* Borda dourada */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 15px;
+        }
+        
+        h1 {
+            font-family: 'Exo 2', sans-serif; /* Fonte para títulos */
+            font-weight: 700; /* Bold */
+            color: var(--gold-primary); /* Dourado */
+            margin: 0;
+            font-size: 2.8em;
+        }
+        
+        .subtitle {
+            font-family: 'Josefin Sans', sans-serif; /* Fonte para subtítulos */
+            color: var(--navy-dark); /* Texto escuro */
+            font-size: 1.2em;
+            margin-top: 5px;
+            opacity: 0.9;
+        }
+        
+        /* Mensagem de Desenvolvimento */
+        .message {
+            font-family: 'Exo 2', sans-serif; /* Fonte para a mensagem */
+            font-weight: 400; /* Regular */
+            font-size: 1.8em;
+            margin: 30px 0;
+            color: var(--navy-dark); /* Texto escuro */
+        }
+        
+        /* Contatos */
+        .contact-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* Espaçamento entre os botões */
+            margin-top: 30px;
+        }
+
+        .contact-btn {
+            display: inline-flex; /* Para alinhar ícone e texto */
+            align-items: center;
+            justify-content: center;
+            width: 100%; /* Ocupa 100% da largura do pai */
+            max-width: 350px; /* Limita a largura dos botões em desktop */
+            margin: 0 auto; /* Centraliza os botões */
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1em;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-btn i {
+            margin-right: 10px; /* Espaçamento entre ícone e texto */
+            font-size: 1.3em;
+        }
+
+        /* Estilo Específico para WhatsApp */
+        .whatsapp-btn {
+            background-color: var(--whatsapp-green); /* Verde WhatsApp */
+            color: white;
+            border: 2px solid var(--whatsapp-green);
+        }
+        
+        .whatsapp-btn:hover {
+            background-color: var(--whatsapp-dark); /* Verde escuro no hover */
+            border-color: var(--whatsapp-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Estilo Específico para Email */
+        .email-btn {
+            background-color: var(--orange-accent); /* Laranja */
+            color: white;
+            border: 2px solid var(--orange-accent);
+        }
+
+        .email-btn:hover {
+            background-color: var(--navy-dark); /* Azul escuro */
+            border-color: var(--navy-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Rodapé */
+        footer {
+            background-color: var(--navy-dark); /* Fundo escuro */
+            color: var(--light-gray); /* Texto cinza claro */
+            text-align: center;
+            padding: 15px 20px;
+            width: 100%;
+            position: absolute; /* Fixa no fundo da tela */
+            bottom: 0;
+            font-size: 0.9em;
+            z-index: 5;
+        }
+
+        footer p {
+            margin: 0; /* Remove margem padrão de parágrafos no footer */
+            color: var(--light-gray); /* Garante a cor do texto */
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            body {
+                padding: 0; /* Remove qualquer padding do body em mobile */
+                align-items: stretch; /* Permite que o container se estique para os lados */
+            }
+            .main-container {
+                padding: 30px 20px;
+                margin: 0; /* Remove margens laterais */
+                border-radius: 0; /* Remove border-radius para preencher as bordas */
+                box-shadow: none; /* Remove sombra para um visual "flat" */
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .subtitle {
+                font-size: 1em;
+            }
+            
+            .message {
+                font-size: 1.3em;
+                margin: 20px 0;
+            }
+
+            .profile-img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-container {
+                padding: 25px 15px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            .message {
+                font-size: 1.1em;
+            }
+            .contact-btn {
+                font-size: 1em;
+                padding: 12px 20px;
+            }
+            .contact-btn i {
+                font-size: 1.1em;
+            }
+            footer {
+                padding: 10px 15px;
+                font-size: 0.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="profile-section">
+            <img src="imgs/profile.png" alt="Marcos Lafratta Jr" class="profile-img">
+            <h1>Marcos Lafratta Jr</h1>
+            <p class="subtitle">Corretor de Imóveis & Empreendedor Digital | João Pessoa - PB</p>
+        </div>
+        
+        <p class="message">Estamos em desenvolvimento para trazer o melhor conteúdo e soluções para você!</p>
+                
+        <div class="contact-options">
+            <a href="https://wa.me/5583993578751" class="contact-btn whatsapp-btn">
+                <i class="fab fa-whatsapp"></i> WhatsApp: (83) 9.9357-8751
+            </a>
+            <a href="mailto:marcos@lafrattajr.com" class="contact-btn email-btn">
+                <i class="fas fa-envelope"></i> marcos@lafrattajr.com
+            </a>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; <span id="year"></span> Marcos Lafratta Jr - Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+        // Script para atualizar o ano no rodapé
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearSpan = document.getElementById('year');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+</body>
+</html>
