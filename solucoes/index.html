@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* Variáveis de Cor (Suas Cores Definidas) */
         :root {
             --navy-dark: #061F28;
             --white: #FFFFFF;
@@ -23,62 +22,41 @@
             --transition: all 0.3s ease-in-out;
         }
         
-        /* Reset Básico */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         
-        html {
-            scroll-behavior: smooth;
+        html, body {
+            height: 100%;
         }
 
-        /* Estilos do Corpo */
         body {
-            font-family: 'Josefin Sans', sans-serif; /* Fonte para textos gerais */
-            background-color: var(--navy-dark); /* Fundo escuro */
-            color: var(--white); /* Cor do texto padrão */
+            font-family: 'Josefin Sans', sans-serif;
+            color: var(--navy-dark);
             line-height: 1.6;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center; /* Centraliza conteúdo verticalmente */
-            min-height: 100vh;
-            padding: 0; /* Remover padding padrão do body */
-            background-image: url('imgs/bg_jampa.png'); /* Imagem de fundo */
+            background-color: var(--navy-dark);
+            background-image: url('https://lafrattajr.com.br/imgs/bg_jampa.png');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            position: relative;
         }
         
-        /* Overlay para a imagem de fundo */
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(6, 31, 40, 0.6); /* Transparência */
-            z-index: -1;
-        }
-
-        /* Container Principal do Conteúdo */
         .main-container {
-            max-width: 700px; /* Limite de largura para desktop */
-            width: 100%; /* Ocupa 100% da largura disponível */
-            background-color: rgba(255, 255, 255, 0.95); /* Fundo quase branco com leve transparência */
+            flex: 1 0 auto;
+            width: 100%;
+            max-width: 700px;
+            background-color: var(--white);
             padding: 40px;
-            border-radius: 12px; /* Bordas arredondadas para desktop */
+            border-radius: 12px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
             text-align: center;
-            position: relative;
-            z-index: 10;
+            margin: 40px auto;
         }
         
-        /* Seção de Perfil */
         .profile-section {
             display: flex;
             flex-direction: column;
@@ -91,51 +69,49 @@
             height: 150px;
             border-radius: 50%;
             object-fit: cover;
-            border: 5px solid var(--gold-primary); /* Borda dourada */
+            border: 5px solid var(--gold-primary);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             margin-bottom: 15px;
         }
         
         h1 {
-            font-family: 'Exo 2', sans-serif; /* Fonte para títulos */
-            font-weight: 700; /* Bold */
-            color: var(--gold-primary); /* Dourado */
+            font-family: 'Exo 2', sans-serif;
+            font-weight: 700;
+            color: var(--gold-primary);
             margin: 0;
             font-size: 2.8em;
         }
         
         .subtitle {
-            font-family: 'Josefin Sans', sans-serif; /* Fonte para subtítulos */
-            color: var(--navy-dark); /* Texto escuro */
+            font-family: 'Josefin Sans', sans-serif;
+            color: var(--navy-dark);
             font-size: 1.2em;
             margin-top: 5px;
             opacity: 0.9;
         }
         
-        /* Mensagem de Desenvolvimento */
         .message {
-            font-family: 'Exo 2', sans-serif; /* Fonte para a mensagem */
-            font-weight: 400; /* Regular */
+            font-family: 'Exo 2', sans-serif;
+            font-weight: 400;
             font-size: 1.8em;
             margin: 30px 0;
-            color: var(--navy-dark); /* Texto escuro */
+            color: var(--navy-dark);
         }
         
-        /* Contatos */
         .contact-options {
             display: flex;
             flex-direction: column;
-            gap: 15px; /* Espaçamento entre os botões */
+            gap: 15px;
             margin-top: 30px;
         }
 
         .contact-btn {
-            display: inline-flex; /* Para alinhar ícone e texto */
+            display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 100%; /* Ocupa 100% da largura do pai */
-            max-width: 350px; /* Limita a largura dos botões em desktop */
-            margin: 0 auto; /* Centraliza os botões */
+            width: 100%;
+            max-width: 350px;
+            margin: 0 auto;
             padding: 15px 25px;
             border-radius: 50px;
             font-weight: bold;
@@ -146,67 +122,63 @@
         }
         
         .contact-btn i {
-            margin-right: 10px; /* Espaçamento entre ícone e texto */
+            margin-right: 10px;
             font-size: 1.3em;
         }
 
-        /* Estilo Específico para WhatsApp */
         .whatsapp-btn {
-            background-color: var(--whatsapp-green); /* Verde WhatsApp */
+            background-color: var(--whatsapp-green);
             color: white;
             border: 2px solid var(--whatsapp-green);
         }
         
         .whatsapp-btn:hover {
-            background-color: var(--whatsapp-dark); /* Verde escuro no hover */
+            background-color: var(--whatsapp-dark);
             border-color: var(--whatsapp-dark);
             transform: translateY(-3px);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
 
-        /* Estilo Específico para Email */
         .email-btn {
-            background-color: var(--orange-accent); /* Laranja */
+            background-color: var(--orange-accent);
             color: white;
             border: 2px solid var(--orange-accent);
         }
 
         .email-btn:hover {
-            background-color: var(--navy-dark); /* Azul escuro */
+            background-color: var(--navy-dark);
             border-color: var(--navy-dark);
             transform: translateY(-3px);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
         
-        /* Rodapé */
         footer {
-            background-color: var(--navy-dark); /* Fundo escuro */
-            color: var(--light-gray); /* Texto cinza claro */
+            flex-shrink: 0;
+            background-color: var(--navy-dark);
+            color: var(--light-gray);
             text-align: center;
             padding: 15px 20px;
             width: 100%;
-            position: absolute; /* Fixa no fundo da tela */
-            bottom: 0;
             font-size: 0.9em;
-            z-index: 5;
         }
 
         footer p {
-            margin: 0; /* Remove margem padrão de parágrafos no footer */
-            color: var(--light-gray); /* Garante a cor do texto */
+            margin: 0;
+            color: var(--light-gray);
         }
         
-        /* Responsividade */
         @media (max-width: 768px) {
             body {
-                padding: 0; /* Remove qualquer padding do body em mobile */
-                align-items: stretch; /* Permite que o container se estique para os lados */
+                background: var(--white);
+                display: block;
             }
+            
             .main-container {
+                margin: 0;
                 padding: 30px 20px;
-                margin: 0; /* Remove margens laterais */
-                border-radius: 0; /* Remove border-radius para preencher as bordas */
-                box-shadow: none; /* Remove sombra para um visual "flat" */
+                border-radius: 0;
+                box-shadow: none;
+                min-height: 100vh;
             }
             
             h1 {
@@ -277,13 +249,7 @@
     </footer>
 
     <script>
-        // Script para atualizar o ano no rodapé
-        document.addEventListener('DOMContentLoaded', function() {
-            const yearSpan = document.getElementById('year');
-            if (yearSpan) {
-                yearSpan.textContent = new Date().getFullYear();
-            }
-        });
+        document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
