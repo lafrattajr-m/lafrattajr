@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Marcos Lafratta Jr | Site em Desenvolvimento - Conecte-se!</title>
+    <link rel="icon" href="https://lafrattajr.com.br/imgs/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&family=Josefin+Sans:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --navy-dark: #061F28;
+            --white: #FFFFFF;
+            --light-gray: #C0C5C9;
+            --gold-primary: #F5B918;
+            --orange-accent: #A62F03;
+            --whatsapp-green: #25D366;
+            --whatsapp-dark: #128C7E;
+            --transition: all 0.3s ease-in-out;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Josefin Sans', sans-serif;
+            color: var(--navy-dark);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+            background-color: var(--navy-dark);
+            background-image: url('https://lafrattajr.com.br/imgs/bg_jampa.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .main-wrapper {
+            flex: 1;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-container {
+            flex: 1 0 auto;
+            width: 100%;
+            max-width: 700px;
+            background-color: var(--white);
+            padding: 40px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .profile-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--gold-primary);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 15px;
+        }
+        
+        h1 {
+            font-family: 'Exo 2', sans-serif;
+            font-weight: 700;
+            color: var(--gold-primary);
+            margin: 0;
+            font-size: 2.8em;
+        }
+        
+        .subtitle {
+            font-family: 'Josefin Sans', sans-serif;
+            color: var(--navy-dark);
+            font-size: 1.2em;
+            margin-top: 5px;
+            opacity: 0.9;
+        }
+        
+        .message {
+            font-family: 'Exo 2', sans-serif;
+            font-weight: 400;
+            font-size: 1.8em;
+            margin: 30px 0;
+            color: var(--navy-dark);
+        }
+        
+        .logo-container {
+            margin: 20px 0;
+        }
+
+        .logo-principal {
+            max-width: 250px;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            transition: var(--transition);
+            /* FORÇA O LOGO BRANCO (INVERTIDO) NO DESKTOP */
+            filter: brightness(0) invert(1);
+        }
+        
+        .contact-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 350px;
+            margin: 0 auto;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1em;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-btn i {
+            margin-right: 10px;
+            font-size: 1.3em;
+        }
+
+        .whatsapp-btn {
+            background-color: var(--whatsapp-green);
+            color: white;
+            border: 2px solid var(--whatsapp-green);
+        }
+        
+        .whatsapp-btn:hover {
+            background-color: var(--whatsapp-dark);
+            border-color: var(--whatsapp-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .email-btn {
+            background-color: var(--orange-accent);
+            color: white;
+            border: 2px solid var(--orange-accent);
+        }
+
+        .email-btn:hover {
+            background-color: var(--navy-dark);
+            border-color: var(--navy-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        footer {
+            flex-shrink: 0;
+            background-color: var(--navy-dark);
+            color: var(--light-gray);
+            text-align: center;
+            padding: 15px 20px;
+            width: 100%;
+            font-size: 0.9em;
+        }
+
+        footer p {
+            margin: 0;
+            color: var(--light-gray);
+        }
+        
+        /* Desktop Styles */
+        @media (min-width: 769px) {
+            .main-container {
+                border-radius: 12px;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+                margin: 40px auto;
+            }
+        }
+        
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            body {
+                background: var(--white);
+                background-image: none;
+            }
+            
+            .main-container {
+                padding: 30px 20px;
+                margin: 0;
+                border-radius: 0;
+                box-shadow: none;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .subtitle {
+                font-size: 1em;
+            }
+            
+            .message {
+                font-size: 1.3em;
+                margin: 20px 0;
+            }
+
+            .profile-img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .logo-principal {
+                /* REMOVE O FILTRO PARA MOSTRAR O LOGO ORIGINAL (PRETO) NO MOBILE */
+                filter: brightness(0) invert(0);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-container {
+                padding: 25px 15px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            .message {
+                font-size: 1.1em;
+            }
+            .contact-btn {
+                font-size: 1em;
+                padding: 12px 20px;
+            }
+            .contact-btn i {
+                font-size: 1.1em;
+            }
+            footer {
+                padding: 10px 15px;
+                font-size: 0.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="main-container">
+            <div class="profile-section">
+                <img src="https://lafrattajr.com.br/imgs/profile.png" alt="Marcos Lafratta Jr" class="profile-img">
+                <h1>Marcos Lafratta Jr</h1>
+                <p class="subtitle">Corretor de Imóveis & Empreendedor Digital
+                    <br>João Pessoa - PB</br></p>
+            </div>
+            
+            <p class="message">Estamos em desenvolvimento para trazer o melhor conteúdo e soluções para você!</p>
+
+            <div class="logo-container">
+                <img src="https://lafrattajr.com.br/imgs/logo-principal.png" alt="Lafratta Jr Logo" class="logo-principal">
+            </div>
+
+            <div class="contact-options">
+                <a href="https://wa.me/5583993578751" class="contact-btn whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> WhatsApp: (83) 9.9357-8751
+                </a>
+                <a href="mailto:marcos@lafrattajr.com" class="contact-btn email-btn">
+                    <i class="fas fa-envelope"></i> marcos@lafrattajr.com
+                </a>
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; <span id="year"></span> Marcos Lafratta Jr - Todos os direitos reservados</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
