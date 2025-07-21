@@ -107,7 +107,7 @@
         .logo-container {
             margin: 20px 0;
         }
-        
+
         .logo-principal {
             max-width: 250px;
             width: 100%;
@@ -115,6 +115,8 @@
             display: block;
             margin: 0 auto;
             transition: var(--transition);
+            /* FORÇA O LOGO BRANCO (INVERTIDO) NO DESKTOP */
+            filter: brightness(0) invert(1);
         }
         
         .contact-options {
@@ -226,9 +228,10 @@
                 width: 120px;
                 height: 120px;
             }
-            
+
             .logo-principal {
-                max-width: 200px;
+                /* REMOVE O FILTRO PARA MOSTRAR O LOGO ORIGINAL (PRETO) NO MOBILE */
+                filter: brightness(0) invert(0);
             }
         }
 
