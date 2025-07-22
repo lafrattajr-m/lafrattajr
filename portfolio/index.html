@@ -1,297 +1,496 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Marcos Lafratta Jr | Site em Desenvolvimento - Conecte-se!</title>
-    <link rel="icon" href="https://lafrattajr.com.br/imgs/favicon.png" type="image/png">
+    <title>Marcos Lafratta Jr. | Consultor Estratégico em Negócios e Corretor de Imóveis CRECI PB 17102-F</title>
+    <meta name="description"
+        content="Consultor Estratégico em Negócios e Corretor de Imóveis especializado em marketing digital, inteligência de dados e mercado imobiliário em João Pessoa, PB.">
+    <meta name="keywords"
+        content="corretor de imóveis, consultor estratégico, marketing digital, João Pessoa, CRECI PB 17102-F, Marcos Lafratta Jr">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lafrattajr.com.br/portfolio">
+    <meta property="og:title" content="Marcos Lafratta Jr. - Consultor Estratégico e Corretor de Imóveis">
+    <meta property="og:description"
+        content="Especialista em estratégia de negócios, marketing digital e mercado imobiliário em João Pessoa, PB.">
+    <meta property="og:image" content="https://lafrattajr.com.br/imgs/profile.png">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://lafrattajr.com.br/portfolio">
+    <meta name="twitter:title" content="Marcos Lafratta Jr. - Consultor Estratégico e Corretor de Imóveis">
+    <meta name="twitter:description"
+        content="Especialista em estratégia de negócios, marketing digital e mercado imobiliário em João Pessoa, PB.">
+    <meta name="twitter:image" content="https://lafrattajr.com.br/imgs/profile.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="imgs/favicon.png">
+    <link rel="apple-touch-icon" href="imgs/favicon.png">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&family=Josefin+Sans:wght@400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Poppins:wght@300;400;500;600;700&family=Lora:ital,wght@1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        :root {
-            --navy-dark: #061F28;
-            --white: #FFFFFF;
-            --light-gray: #C0C5C9;
-            --gold-primary: #F5B918;
-            --orange-accent: #A62F03;
-            --whatsapp-green: #25D366;
-            --whatsapp-dark: #128C7E;
-            --transition: all 0.3s ease-in-out;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        html {
-            height: 100%;
-        }
 
-        body {
-            font-family: 'Josefin Sans', sans-serif;
-            color: var(--navy-dark);
-            line-height: 1.6;
-            display: flex;
-            flex-direction: column;
-            min-height: 100%;
-            background-color: var(--navy-dark);
-            background-image: url('https://lafrattajr.com.br/imgs/bg_jampa.png');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-        
-        .main-wrapper {
-            flex: 1;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .main-container {
-            flex: 1 0 auto;
-            width: 100%;
-            max-width: 700px;
-            background-color: var(--white);
-            padding: 40px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        
-        .profile-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 30px;
-        }
-        
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid var(--gold-primary);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            margin-bottom: 15px;
-        }
-        
-        h1 {
-            font-family: 'Exo 2', sans-serif;
-            font-weight: 700;
-            color: var(--gold-primary);
-            margin: 0;
-            font-size: 2.8em;
-        }
-        
-        .subtitle {
-            font-family: 'Josefin Sans', sans-serif;
-            color: var(--navy-dark);
-            font-size: 1.2em;
-            margin-top: 5px;
-            opacity: 0.9;
-        }
-        
-        .message {
-            font-family: 'Exo 2', sans-serif;
-            font-weight: 400;
-            font-size: 1.8em;
-            margin: 30px 0;
-            color: var(--navy-dark);
-        }
-        
-        .logo-container {
-            margin: 20px 0;
-        }
-
-        .logo-principal {
-            max-width: 250px;
-            width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-            transition: var(--transition);
-            /* FORÇA O LOGO BRANCO (INVERTIDO) NO DESKTOP */
-            filter: brightness(0) invert(1);
-        }
-        
-        .contact-options {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-top: 30px;
-        }
-
-        .contact-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            max-width: 350px;
-            margin: 0 auto;
-            padding: 15px 25px;
-            border-radius: 50px;
-            font-weight: bold;
-            font-size: 1.1em;
-            text-decoration: none;
-            transition: var(--transition);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        
-        .contact-btn i {
-            margin-right: 10px;
-            font-size: 1.3em;
-        }
-
-        .whatsapp-btn {
-            background-color: var(--whatsapp-green);
-            color: white;
-            border: 2px solid var(--whatsapp-green);
-        }
-        
-        .whatsapp-btn:hover {
-            background-color: var(--whatsapp-dark);
-            border-color: var(--whatsapp-dark);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        .email-btn {
-            background-color: var(--orange-accent);
-            color: white;
-            border: 2px solid var(--orange-accent);
-        }
-
-        .email-btn:hover {
-            background-color: var(--navy-dark);
-            border-color: var(--navy-dark);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-        }
-        
-        footer {
-            flex-shrink: 0;
-            background-color: var(--navy-dark);
-            color: var(--light-gray);
-            text-align: center;
-            padding: 15px 20px;
-            width: 100%;
-            font-size: 0.9em;
-        }
-
-        footer p {
-            margin: 0;
-            color: var(--light-gray);
-        }
-        
-        /* Desktop Styles */
-        @media (min-width: 769px) {
-            .main-container {
-                border-radius: 12px;
-                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-                margin: 40px auto;
-            }
-        }
-        
-        /* Mobile Styles */
-        @media (max-width: 768px) {
-            body {
-                background: var(--white);
-                background-image: none;
-            }
-            
-            .main-container {
-                padding: 30px 20px;
-                margin: 0;
-                border-radius: 0;
-                box-shadow: none;
-            }
-            
-            h1 {
-                font-size: 2em;
-            }
-            
-            .subtitle {
-                font-size: 1em;
-            }
-            
-            .message {
-                font-size: 1.3em;
-                margin: 20px 0;
-            }
-
-            .profile-img {
-                width: 120px;
-                height: 120px;
-            }
-
-            .logo-principal {
-                /* REMOVE O FILTRO PARA MOSTRAR O LOGO ORIGINAL (PRETO) NO MOBILE */
-                filter: brightness(0) invert(0);
-            }
-        }
-
-        @media (max-width: 480px) {
-            .main-container {
-                padding: 25px 15px;
-            }
-            h1 {
-                font-size: 1.8em;
-            }
-            .message {
-                font-size: 1.1em;
-            }
-            .contact-btn {
-                font-size: 1em;
-                padding: 12px 20px;
-            }
-            .contact-btn i {
-                font-size: 1.1em;
-            }
-            footer {
-                padding: 10px 15px;
-                font-size: 0.8em;
-            }
-        }
-    </style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <div class="main-wrapper">
-        <div class="main-container">
-            <div class="profile-section">
-                <img src="https://lafrattajr.com.br/imgs/profile.png" alt="Marcos Lafratta Jr" class="profile-img">
-                <h1>Marcos Lafratta Jr</h1>
-                <p class="subtitle">Corretor de Imóveis & Empreendedor Digital
-                    <br>João Pessoa - PB</br></p>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
             </div>
-            
-            <p class="message">Estamos em desenvolvimento para trazer o melhor conteúdo e soluções para você!</p>
-
-            <div class="logo-container">
-                <img src="https://lafrattajr.com.br/imgs/logo-principal.png" alt="Lafratta Jr Logo" class="logo-principal">
-            </div>
-
-            <div class="contact-options">
-                <a href="https://wa.me/5583993578751" class="contact-btn whatsapp-btn">
-                    <i class="fab fa-whatsapp"></i> WhatsApp: (83) 9.9357-8751
-                </a>
-                <a href="mailto:marcos@lafrattajr.com" class="contact-btn email-btn">
-                    <i class="fas fa-envelope"></i> marcos@lafrattajr.com
-                </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#competencies" class="nav-link">Competências</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link">Experiência</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projetos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contato</a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </div>
-        
-        <footer>
-            <p>&copy; <span id="year"></span> Marcos Lafratta Jr - Todos os direitos reservados</p>
-        </footer>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="profile-image-container">
+                    <img src="https://lafrattajr.com.br/imgs/profile.png" alt="Marcos Lafratta Jr."
+                        class="profile-image">
+                </div>
+                <h1 class="hero-title">Marcos Lafratta Jr.</h1>
+                <h2 class="hero-subtitle">Consultor Estratégico em Negócios | Corretor de Imóveis</h2>
+                <p class="hero-description">CRECI PB 17102-F</p>
+
+                <div class="contact-badges">
+                    <a href="mailto:marcos@lafrattajr.com" class="contact-badge">
+                        <i class="fas fa-envelope"></i>
+                        <span>marcos@lafrattajr.com</span>
+                    </a>
+                    <a href="https://wa.me/5583993578751" target="_blank" rel="noopener noreferrer"
+                        class="contact-badge">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>(83) 9.9357-8751</span>
+                    </a>
+                    <a href="https://linkedin.com/in/lafrattajr" target="_blank" rel="noopener noreferrer"
+                        class="contact-badge">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://instagram.com/lafrattajr" target="_blank" rel="noopener noreferrer"
+                        class="contact-badge">
+                        <i class="fab fa-instagram"></i>
+                        <span>@lafrattajr</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Sobre mim</h2>
+            <div class="about-content">
+                <p>Atuo na interseção entre <strong>estratégia de negócios, marketing digital, inteligência de
+                        dados</strong> e o <strong>mercado imobiliário</strong>, com registro ativo como Corretor de
+                    Imóveis (CRECI PB 17102-F).</p>
+
+                <p>Minha missão é <strong>transformar desafios em resultados concretos</strong>, unindo visão
+                    estratégica, execução orientada por dados e foco total em performance e retorno sobre investimento.
+                </p>
+
+                <p>Com uma base sólida em <strong>logística e operações</strong>, desenvolvi e liderei processos em
+                    empresas como <strong>Tede Transportes</strong> e <strong>Cargolift Logística S.A.</strong>, com
+                    entregas consistentes e mensuráveis.</p>
+
+                <p>Hoje, somo essa vivência à <strong>consultoria estratégica para negócios digitais e
+                        imobiliários</strong>, aplicando técnicas modernas de <strong>captação de leads, automação
+                        comercial, funis de vendas e performance digital</strong>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Competencies Section -->
+    <section id="competencies" class="competencies">
+        <div class="container">
+            <h2 class="section-title">Competências-Chave</h2>
+
+            <div class="competencies-grid">
+                <div class="competency-category">
+                    <h3 class="category-title">Hard Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <i class="fas fa-chart-line"></i>
+                            <h4>Estratégia de Negócios e Planejamento Comercial</h4>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-users"></i>
+                            <h4>Geração de Leads Qualificados</h4>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-bullhorn"></i>
+                            <h4>Google Ads | Meta Ads | CRM Imobiliário</h4>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-search"></i>
+                            <h4>SEO Técnico e On-Page | Copywriting Comercial</h4>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-cogs"></i>
+                            <h4>Implantação de Funis de Vendas Automatizados</h4>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-home"></i>
+                            <h4>Captação de Investidores | Consultoria MCMV</h4>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-laptop-code"></i>
+                            <h4>Produção de Landing Pages Otimizadas</h4>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-envelope"></i>
+                            <h4>Gestão de Campanhas Imobiliárias</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="competency-category">
+                    <h3 class="category-title">Soft Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <i class="fas fa-brain"></i>
+                            <h4>Pensamento Analítico e Estratégico</h4>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-comments"></i>
+                            <h4>Comunicação Clara e Persuasiva</h4>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-puzzle-piece"></i>
+                            <h4>Resolução de Problemas</h4>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-rocket"></i>
+                            <h4>Autonomia e Proatividade</h4>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-tasks"></i>
+                            <h4>Organização e Gestão de Projetos</h4>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-bullseye"></i>
+                            <h4>Foco em Resultados e Aprendizado Contínuo</h4>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-user-friends"></i>
+                            <h4>Liderança de Times Multidisciplinares</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section id="tools" class="tools">
+        <div class="container">
+            <h2 class="section-title">Ferramentas e Sistemas Utilizados</h2>
+
+            <div class="tools-categories">
+                <div class="tool-category">
+                    <h3>Gestão de Projetos e Produtividade</h3>
+                    <div class="tools-grid">
+                        <span class="tool-tag">Asana</span>
+                        <span class="tool-tag">Técnica Pomodoro</span>
+                        <span class="tool-tag">GitMind</span>
+                        <span class="tool-tag">Google Workspace</span>
+                        <span class="tool-tag">Notion</span>
+                    </div>
+                </div>
+
+                <div class="tool-category">
+                    <h3>Marketing e Automação</h3>
+                    <div class="tools-grid">
+                        <span class="tool-tag">Meta Ads</span>
+                        <span class="tool-tag">Google Ads</span>
+                        <span class="tool-tag">HubSpot</span>
+                        <span class="tool-tag">RD Station</span>
+                        <span class="tool-tag">Tag Manager</span>
+                        <span class="tool-tag">Search Console</span>
+                    </div>
+                </div>
+
+                <div class="tool-category">
+                    <h3>Desenvolvimento e Design Web</h3>
+                    <div class="tools-grid">
+                        <span class="tool-tag">HTML5</span>
+                        <span class="tool-tag">CSS3</span>
+                        <span class="tool-tag">JavaScript</span>
+                        <span class="tool-tag">GitHub Pages</span>
+                        <span class="tool-tag">Hostinger</span>
+                        <span class="tool-tag">Canva Pro</span>
+                    </div>
+                </div>
+
+                <div class="tool-category">
+                    <h3>Criação de Conteúdo e Mídia</h3>
+                    <div class="tools-grid">
+                        <span class="tool-tag">CapCut</span>
+                        <span class="tool-tag">InShot</span>
+                        <span class="tool-tag">DALL·E</span>
+                        <span class="tool-tag">Midjourney</span>
+                        <span class="tool-tag">Runway ML</span>
+                        <span class="tool-tag">HeyGen</span>
+                    </div>
+                </div>
+
+                <div class="tool-category">
+                    <h3>SEO e Análise de Dados</h3>
+                    <div class="tools-grid">
+                        <span class="tool-tag">SEMrush</span>
+                        <span class="tool-tag">GA4</span>
+                        <span class="tool-tag">Power BI</span>
+                        <span class="tool-tag">Excel Avançado</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experiências Profissionais</h2>
+
+            <div class="timeline">
+                   <div class="timeline-item">
+                    <div class="timeline-date">Janeiro 2025 - Atual</div>
+                    <div class="timeline-content">
+                        <h3>Estrategista Digital | Social Media</h3>
+                        <h4>Freelancer - João Pessoa, PB</h4>
+                        <p>Planejamento e execução de estratégias digitais para empresas e profissionais autônomos.
+                            Desenvolvimento de campanhas de tráfego, SEO, landing pages e automação comercial.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Agosto 2024 - Atual</div>
+                    <div class="timeline-content">
+                        <h3>Corretor de Imóveis</h3>
+                        <h4>Autônomo - João Pessoa, PB</h4>
+                        <p>Atuação em vendas, locações, imóveis na planta e consultoria especializada para o programa
+                            Minha Casa Minha Vida e investidores. Integração com marketing digital, campanhas e CRM
+                            Imobiliário.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2012 - 2021</div>
+                    <div class="timeline-content">
+                        <h3>Gerente Operacional | Supervisor de Logística</h3>
+                        <h4>Tede Transportes | Cargolift Logística S.A.</h4>
+                        <p>Gestão de equipes, otimização de processos, controle de indicadores logísticos e suporte
+                            direto à operação em nível nacional.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <h2 class="section-title">Formação Acadêmica</h2>
+
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="education-date">2025-2026 (em andamento)</div>
+                    <h3>Gestão de Negócios Imobiliários</h3>
+                    <h4>Cruzeiro do Sul Virtual</h4>
+                </div>
+
+                <div class="education-card">
+                    <div class="education-date">2020-2021</div>
+                    <h3>MBA em Logística e Supply Chain</h3>
+                    <h4>FMU</h4>
+                </div>
+
+                <div class="education-card">
+                    <div class="education-date">2011-2012</div>
+                    <h3>Gestão da Cadeia de Suprimentos</h3>
+                    <h4>Anhanguera Educacional</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projetos Conectados</h2>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Corretor de Imóveis</h3>
+                    <p>Página institucional com portfólio e canais de contato</p>
+                    <a href="https://lafrattajr.com" target="_blank" rel="noopener noreferrer" class="project-link">
+                        Visitar Site <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3>Minha Casa Minha Vida</h3>
+                    <p>Captação de leads qualificados com foco em imóveis populares</p>
+                    <a href="https://lafrattajr.com.br/mcmv" target="_blank" rel="noopener noreferrer" class="project-link">
+                        Visitar Site <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Investimentos Imobiliários</h3>
+                    <p>Plataforma com foco em investidores e imóveis na planta</p>
+                    <a href="https://lafrattajr.com.br/investimento" target="_blank" rel="noopener noreferrer" class="project-link">
+                        Visitar Site <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Soluções Digitais</h3>
+                    <p>Hub de serviços e tecnologia para digitalização de negócios locais</p>
+                    <a href="https://lafrattajr.com.br/solucoes" target="_blank" rel="noopener noreferrer" class="project-link">
+                        Visitar Site <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Transforme seu desafio em oportunidade concreta</h2>
+                <p>Se você busca soluções imobiliárias ou digitais com <strong>visão estratégica</strong>,
+                    <strong>execução técnica</strong> e <strong>foco em resultados</strong>, entre em contato.
+                </p>
+
+                <div class="cta-buttons">
+                    <a href="https://wa.me/5583993578751" target="_blank" rel="noopener noreferrer"
+                        class="cta-button primary">
+                        <i class="fab fa-whatsapp"></i>
+                        Fale comigo agora pelo WhatsApp
+                    </a>
+                    <a href="mailto:marcos@lafrattajr.com" class="cta-button secondary">
+                        <i class="fas fa-envelope"></i>
+                        Ou envie sua demanda por e-mail
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p><strong>&copy; <span id="current-year"></span> Lafratta Jr. (CRECI PB 17102-F) | Todos os direitos
+                    reservados.</strong></p>
+                <div class="footer-links">
+                    <a href="mailto:marcos@lafrattajr.com">marcos@lafrattajr.com</a>
+                    <span>|</span>
+                    <a href="https://wa.me/5583993578751" target="_blank" rel="noopener noreferrer">(83) 9.9357-8751</a>
+                    <span>|</span>
+                    <a href="https://instagram.com/lafrattajr" target="_blank" rel="noopener noreferrer">@lafrattajr</a>
+                </div>
+                <div class="footer-legal">
+                    <a href="https://lafrattajr.com/politica-de-privacidade" target="_blank"
+                        rel="noopener noreferrer">Política de Privacidade</a>
+                    <span>|</span>
+                    <a href="https://lafrattajr.com/termos-e-condicoes-de-uso" target="_blank"
+                        rel="noopener noreferrer">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/5583993578751" target="_blank" rel="noopener noreferrer"
+            aria-label="Contato via WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
     </div>
 
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Marcos Lafratta Jr",
+        "jobTitle": "Consultor Estratégico em Negócios e Corretor de Imóveis",
+        "url": "https://lafrattajr.com.br/portfolio",
+        "sameAs": [
+            "https://linkedin.com/in/lafrattajr",
+            "https://instagram.com/lafrattajr"
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "João Pessoa",
+            "addressRegion": "PB",
+            "addressCountry": "BR"
+        },
+        "hasOccupation": {
+            "@type": "Occupation",
+            "name": "Corretor de Imóveis",
+            "credentials": "CRECI PB 17102-F"
+        },
+        "email": "marcos@lafrattajr.com",
+        "telephone": "+5583993578751"
+    }
     </script>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
 </body>
+
 </html>
