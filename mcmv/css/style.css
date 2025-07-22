@@ -455,6 +455,32 @@ a:hover {
 .site-link:hover {
     color: white;
 }
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #2C3E50;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  z-index: 9999;
+  font-size: 14px;
+  display: none;
+}
+.cookie-banner a {
+  color: #FAD266;
+  text-decoration: underline;
+}
+.cookie-banner button {
+  background: #FAD266;
+  color: #2C3E50;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-left: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
 /* Versão simplificada para manter consistência */
 #vantagens .benefits-grid {
     display: grid;

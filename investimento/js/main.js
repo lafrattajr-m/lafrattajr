@@ -248,4 +248,17 @@ window.LafrattaJr = {
     preloadImages,
     optimizeFonts
 };
+document.addEventListener('DOMContentLoaded', function () {
+  const cookieBanner = document.getElementById('cookie-banner');
+  const acceptButton = document.getElementById('accept-cookies');
+
+  if (!localStorage.getItem('cookieConsent')) {
+    cookieBanner.style.display = 'block';
+  }
+
+  acceptButton.addEventListener('click', function () {
+    localStorage.setItem('cookieConsent', true);
+    cookieBanner.style.display = 'none';
+  });
+});
 
