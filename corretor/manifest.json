@@ -1,0 +1,28 @@
+{
+    "name": "Marcos Lafratta Jr - Corretor de Imóveis",
+    "short_name": "Lafratta Jr",
+    "description": "Corretor de imóveis especializado em João Pessoa. Investimento imobiliário, MCMV e imóveis na planta.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#F3E9DC",
+    "theme_color": "#2C3E50",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "imgs/Favicon.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "imgs/Favicon.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": ["business", "real estate"],
+    "lang": "pt-BR",
+    "dir": "ltr"
+}
+
