@@ -1,297 +1,336 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corretor de Imóveis | Marcos Lafratta Jr | Site em Desenvolvimento - Conecte-se!</title>
-    <link rel="icon" href="https://lafrattajr.com.br/imgs/favicon.png" type="image/png">
+
+    <title>Corretor de Imóveis em João Pessoa | Marcos Lafratta Jr. | CRECI PB 17102-F</title>
+    <meta name="description" content="Corretor de imóveis especializado em João Pessoa. Marcos Lafratta Jr. | CRECI PB 17102-F. Consultoria completa para financiamento imobiliário, investimentos, Minha Casa Minha Vida e administração de imóveis.">
+
+    <meta name="keywords" content="corretor de imóveis em João Pessoa, consultoria em financiamento imobiliário João Pessoa, imóveis para investir João Pessoa, especialista MCMV João Pessoa, administração de imóveis João Pessoa PB, representação imobiliária na Paraíba, comprar imóvel com segurança João Pessoa, corretor com atendimento estratégico em João Pessoa, imóveis perto do mar em João Pessoa, financiamento habitacional com corretor especialista PB">
+
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Corretor de Imóveis em João Pessoa | Marcos Lafratta Jr.">
+    <meta property="og:description" content="Especialista em imóveis residenciais e de investimento em João Pessoa. Consultoria completa e atendimento personalizado.">
+    <meta property="og:image" content="https://lafrattajr.com.br/imgs/preview-lafrattajr.png">
+    <meta property="og:url" content="https://lafrattajr.com.br/corretor">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Corretor de Imóveis em João Pessoa | Marcos Lafratta Jr.">
+    <meta name="twitter:description" content="Atendimento estratégico e humano para quem busca comprar, vender ou investir em imóveis em João Pessoa.">
+    <meta name="twitter:image" content="https://lafrattajr.com.br/imgs/preview-lafrattajr.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://lafrattajr.com.br/corretor">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="https://lafrattajr.com.br/imgs/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://lafrattajr.com.br/imgs/favicon.png">
+    <link rel="apple-touch-icon" href="https://lafrattajr.com.br/imgs/favicon.png">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&family=Josefin+Sans:wght@400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        :root {
-            --navy-dark: #061F28;
-            --white: #FFFFFF;
-            --light-gray: #C0C5C9;
-            --gold-primary: #F5B918;
-            --orange-accent: #A62F03;
-            --whatsapp-green: #25D366;
-            --whatsapp-dark: #128C7E;
-            --transition: all 0.3s ease-in-out;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        html {
-            height: 100%;
-        }
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Poppins:wght@300;400;500;600;700&family=Lora:ital,wght@1,400&display=swap" rel="stylesheet">
 
-        body {
-            font-family: 'Josefin Sans', sans-serif;
-            color: var(--navy-dark);
-            line-height: 1.6;
-            display: flex;
-            flex-direction: column;
-            min-height: 100%;
-            background-color: var(--navy-dark);
-            background-image: url('https://lafrattajr.com.br/imgs/bg_jampa.png');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-        
-        .main-wrapper {
-            flex: 1;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .main-container {
-            flex: 1 0 auto;
-            width: 100%;
-            max-width: 700px;
-            background-color: var(--white);
-            padding: 40px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        
-        .profile-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 30px;
-        }
-        
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid var(--gold-primary);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            margin-bottom: 15px;
-        }
-        
-        h1 {
-            font-family: 'Exo 2', sans-serif;
-            font-weight: 700;
-            color: var(--gold-primary);
-            margin: 0;
-            font-size: 2.8em;
-        }
-        
-        .subtitle {
-            font-family: 'Josefin Sans', sans-serif;
-            color: var(--navy-dark);
-            font-size: 1.2em;
-            margin-top: 5px;
-            opacity: 0.9;
-        }
-        
-        .message {
-            font-family: 'Exo 2', sans-serif;
-            font-weight: 400;
-            font-size: 1.8em;
-            margin: 30px 0;
-            color: var(--navy-dark);
-        }
-        
-        .logo-container {
-            margin: 20px 0;
-        }
-
-        .logo-principal {
-            max-width: 250px;
-            width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-            transition: var(--transition);
-            /* FORÇA O LOGO BRANCO (INVERTIDO) NO DESKTOP */
-            filter: brightness(0) invert(1);
-        }
-        
-        .contact-options {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-top: 30px;
-        }
-
-        .contact-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            max-width: 350px;
-            margin: 0 auto;
-            padding: 15px 25px;
-            border-radius: 50px;
-            font-weight: bold;
-            font-size: 1.1em;
-            text-decoration: none;
-            transition: var(--transition);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        
-        .contact-btn i {
-            margin-right: 10px;
-            font-size: 1.3em;
-        }
-
-        .whatsapp-btn {
-            background-color: var(--whatsapp-green);
-            color: white;
-            border: 2px solid var(--whatsapp-green);
-        }
-        
-        .whatsapp-btn:hover {
-            background-color: var(--whatsapp-dark);
-            border-color: var(--whatsapp-dark);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        .email-btn {
-            background-color: var(--orange-accent);
-            color: white;
-            border: 2px solid var(--orange-accent);
-        }
-
-        .email-btn:hover {
-            background-color: var(--navy-dark);
-            border-color: var(--navy-dark);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-        }
-        
-        footer {
-            flex-shrink: 0;
-            background-color: var(--navy-dark);
-            color: var(--light-gray);
-            text-align: center;
-            padding: 15px 20px;
-            width: 100%;
-            font-size: 0.9em;
-        }
-
-        footer p {
-            margin: 0;
-            color: var(--light-gray);
-        }
-        
-        /* Desktop Styles */
-        @media (min-width: 769px) {
-            .main-container {
-                border-radius: 12px;
-                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-                margin: 40px auto;
-            }
-        }
-        
-        /* Mobile Styles */
-        @media (max-width: 768px) {
-            body {
-                background: var(--white);
-                background-image: none;
-            }
-            
-            .main-container {
-                padding: 30px 20px;
-                margin: 0;
-                border-radius: 0;
-                box-shadow: none;
-            }
-            
-            h1 {
-                font-size: 2em;
-            }
-            
-            .subtitle {
-                font-size: 1em;
-            }
-            
-            .message {
-                font-size: 1.3em;
-                margin: 20px 0;
-            }
-
-            .profile-img {
-                width: 120px;
-                height: 120px;
-            }
-
-            .logo-principal {
-                /* REMOVE O FILTRO PARA MOSTRAR O LOGO ORIGINAL (PRETO) NO MOBILE */
-                filter: brightness(0) invert(0);
-            }
-        }
-
-        @media (max-width: 480px) {
-            .main-container {
-                padding: 25px 15px;
-            }
-            h1 {
-                font-size: 1.8em;
-            }
-            .message {
-                font-size: 1.1em;
-            }
-            .contact-btn {
-                font-size: 1em;
-                padding: 12px 20px;
-            }
-            .contact-btn i {
-                font-size: 1.1em;
-            }
-            footer {
-                padding: 10px 15px;
-                font-size: 0.8em;
-            }
-        }
-    </style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <div class="main-wrapper">
-        <div class="main-container">
-            <div class="profile-section">
-                <img src="https://lafrattajr.com.br/imgs/profile.png" alt="Marcos Lafratta Jr" class="profile-img">
-                <h1>Marcos Lafratta Jr</h1>
-                <p class="subtitle">Corretor de Imóveis & Empreendedor Digital
-                    <br>João Pessoa - PB</br></p>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="https://lafrattajr.com.br/imgs/favicon.png" alt="Lafratta Jr Logo" class="logo-img">
+                    <span class="logo-text">Lafratta Jr</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="#servicos" class="nav-link">Serviços</a></li>
+                    <li><a href="https://lafrattajr.com.br/portfolio/" class="nav-link">Portfólio</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
-            
-            <p class="message">Estamos em desenvolvimento para trazer o melhor conteúdo e soluções para você!</p>
+        </nav>
+    </header>
 
-            <div class="logo-container">
-                <img src="https://lafrattajr.com.br/imgs/logo-principal.png" alt="Lafratta Jr Logo" class="logo-principal">
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="inicio">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">Marcos Lafratta Jr.</h1>
+                        <p class="hero-subtitle">Corretor de Imóveis Especializado</p>
+                        <p class="hero-creci">CRECI PB 17102-F</p>
+                        <p class="hero-description">Sou movido por propósito, disciplina e responsabilidade com cada decisão profissional. Minha trajetória combina visão estratégica, formação sólida e sensibilidade humana.</p>
+                        <p><strong>Estou pronto para te ajudar a decidir com confiança, segurança e estratégia.</strong></p>
+                        <div class="hero-buttons">
+                            <a href="#contato" class="btn btn-primary">Fale Comigo</a>
+                            <a href="https://lafrattajr.com/imoveis" class="btn btn-secondary">Ver Imóveis</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="https://lafrattajr.com.br/imgs/profile.png" alt="Marcos Lafratta Jr. - Corretor de Imóveis" class="profile-img">
+                    </div>
+                </div>
+            </div>Z
+        </section>
+
+        <!-- Sobre Section -->
+        <section class="sobre" id="sobre">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Sobre Mim</h2>
+                    <p class="section-subtitle">Conheça minha trajetória no mercado imobiliário</p>
+                </div>
+                <div class="sobre-content">
+                    <div class="sobre-text">
+                        <p>Atuo como <strong>corretor de imóveis credenciado em João Pessoa – PB, </strong> com especialização em <strong>vendas, locações e consultoria personalizada</strong> para imóveis residenciais, comerciais, na planta e do programa Minha Casa, Minha Vida.</p>
+                        <p>Minha missão é entregar <strong>soluções imobiliárias seguras, rentáveis e sustentáveis, </strong> atendendo <strong>investidores, famílias e empresas</strong> que buscam mais do que imóveis<strong> — buscam patrimônio com propósito. </strong></p>
+                        <p class="sobre-quote">
+                            <em>"Cada cliente é único, e cada imóvel tem sua história. Meu trabalho é encontrar a combinação perfeita entre eles."</em>
+                        </p>
+                        <div class="sobre-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">20+</span>
+                                <span class="stat-label">Projetos de financiamento e viabilidade econômica entregues com sucesso</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">25+</span>
+                                <span class="stat-label">Anos de experiência em atendimento ao cliente</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">98%</span>
+                                <span class="stat-label">Índice de satisfação em tomadas de decisão com base em dados e planejamento</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="contact-options">
-                <a href="https://wa.me/5583993578751" class="contact-btn whatsapp-btn">
-                    <i class="fab fa-whatsapp"></i> WhatsApp: (83) 9.9357-8751
-                </a>
-                <a href="mailto:marcos@lafrattajr.com" class="contact-btn email-btn">
-                    <i class="fas fa-envelope"></i> marcos@lafrattajr.com
-                </a>
+        <!-- Serviços Section -->
+<section class="servicos" id="servicos">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Meus Serviços</h2>
+            <p class="section-subtitle">Soluções completas para suas necessidades imobiliárias</p>
+        </div>
+        <div class="servicos-grid">
+            <div class="servico-card">
+                <div class="servico-icon">🏦</div>
+                <h3 class="servico-title">Assessoria em Financiamento Imobiliário</h3>
+                <p class="servico-description">Entenda as opções e compre com segurança com um especialista ao seu lado durante todo o processo.</p>
+                <a href="https://lafrattajr.com/assessoria-em-financiamento-imobiliario" class="servico-link">Ver Matéria</a>
+            </div>
+            <div class="servico-card">
+                <div class="servico-icon">🤝</div>
+                <h3 class="servico-title">Representação Imobiliária</h3>
+                <p class="servico-description">Descubra como a Representação Imobiliária garante segurança, economia e estratégia na compra ou venda do seu imóvel.</p>
+                <a href="https://lafrattajr.com/o-que-e-representacao-imobiliaria" class="servico-link">Buscar Imóvel</a>
+            </div>
+            <div class="servico-card">
+                <div class="servico-icon">🏢</div>
+                <h3 class="servico-title">Administração de Imóveis</h3>
+                <p class="servico-description">Gestão profissional evita prejuízos, valoriza seu patrimônio e transforma dor de cabeça em rentabilidade previsível.</p>
+                <a href="https://lafrattajr.com/administracao-de-imoveis" class="servico-link">Conhecer</a>
+            </div>
+            <div class="servico-card">
+                <div class="servico-icon">📈</div>
+                <h3 class="servico-title">Investimento Imobiliário</h3>
+                <p class="servico-description">Consultoria em investimentos imobiliários para maximizar sua rentabilidade no setor.</p>
+                <a href="https://lafrattajr.com/investimento" class="servico-link">Investir</a>
+            </div>
+            <div class="servico-card">
+                <div class="servico-icon">🏡</div>
+                <h3 class="servico-title">MCMV</h3>
+                <p class="servico-description">Especialista em Minha Casa Minha Vida. Realize o sonho da casa própria com financiamento facilitado.</p>
+                <a href="https://lafrattajr.com/mcmv" class="servico-link">Saiba Mais</a>
+            </div>
+            <div class="servico-card">
+                <div class="servico-icon">📝</div>
+                <h3 class="servico-title">Formulário MCMV</h3>
+                <p class="servico-description">Preencha nosso formulário especializado para agilizar seu processo no programa habitacional.</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeHhqWt-nOSsLDKLP6n01MgwK2ypvE9PsB-wX0s6z1OTofcLg/viewform" class="servico-link" target="_blank">Preencher</a>
             </div>
         </div>
-        
-        <footer>
-            <p>&copy; <span id="year"></span> Marcos Lafratta Jr - Todos os direitos reservados</p>
-        </footer>
     </div>
+</section>
 
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Pronto para encontrar seu imóvel ideal?</h2>
+                    <p class="cta-description">Entre em contato comigo e vamos juntos realizar seu sonho imobiliário.</p>
+                    <a href="https://wa.me/5583993578751" class="btn btn-primary btn-large">Falar com Corretor</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato Section -->
+        <section class="contato" id="contato">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Entre em Contato</h2>
+                    <p class="section-subtitle">Estou aqui para ajudar você a realizar seus objetivos imobiliários</p>
+                </div>
+                <div class="contato-content">
+                    <div class="contato-info">
+                        <div class="contato-item">
+                            <div class="contato-icon">📱</div>
+                            <div class="contato-details">
+                                <h3>WhatsApp</h3>
+                                <a href="https://wa.me/5583993578751" target="_blank">(83) 9.9357-8751</a>
+                            </div>
+                        </div>
+                        <div class="contato-item">
+                            <div class="contato-icon">✉️</div>
+                            <div class="contato-details">
+                                <h3>E-mail</h3>
+                                <a href="mailto:marcos@lafrattajr.com">marcos@lafrattajr.com</a>
+                            </div>
+                        </div>
+                        <div class="contato-item">
+                            <div class="contato-icon">📍</div>
+                            <div class="contato-details">
+                                <h3>Localização</h3>
+                                <p>João Pessoa - PB</p>
+                            </div>
+                        </div>
+                        <div class="contato-item">
+                            
+                            <div class="contato-details">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contato-form">
+    <form class="form" action="https://formsubmit.co/marcos@lafrattajr.com" method="POST">
+        
+        <!-- Evita redirecionamento para formsubmit.co após envio -->
+        <input type="hidden" name="_next" value="https://lafrattajr.com/obrigado.html">
+        <input type="hidden" name="_captcha" value="false">
+
+        <div class="form-group">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" name="nome" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="interesse">Interesse</label>
+            <select id="interesse" name="interesse" required>
+                <option value="">Selecione uma opção</option>
+                <option value="comprar">Comprar Imóvel</option>
+                <option value="vender">Vender Imóvel</option>
+                <option value="mcmv">Minha Casa Minha Vida</option>
+                <option value="investimento">Investimento</option>
+                <option value="outro">Outro</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte-me mais sobre o que você está procurando..."></textarea>
+        </div>
+        
+        <div class="form-group checkbox-group">
+            <label class="checkbox-label">
+                <input type="checkbox" id="aceite" name="aceite" required>
+                <span class="checkmark"></span>
+                Aceito receber contato e concordo com a 
+                <a href="https://lafrattajr.com/politica-de-privacidade" target="_blank">
+                    Política de Privacidade
+                </a>
+            </label>
+        </div>
+        
+        <button type="submit" class="btn btn-primary btn-full">Enviar Mensagem</button>
+    </form>
+</div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <img src="https://lafrattajr.com.br/imgs/favicon.png" alt="Lafratta Jr Logo" class="footer-logo-img">
+                        <span class="footer-logo-text">Lafratta Jr</span>
+                    </div>
+                    <p class="footer-description">Corretor de imóveis especializado em João Pessoa e região.</p>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/corretor.lafrattajr" target="_blank" class="social-link">Instagram</a>
+                        <a href="https://facebook.com/corretor.lafrattajr" target="_blank" class="social-link">Facebook</a>
+                        <a href="https://linkedin.com/in/lafrattajr" target="_blank" class="social-link">LinkedIn</a>
+                        <a href="https://youtube.com/@corretor.lafrattajr" target="_blank" class="social-link">YouTube</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Serviços</h4>
+                        <ul>
+                            <li><a href="https://lafrattajr.com.br/portfolio/">Portfólio</a></li>
+                            <li><a href="https://lafrattajr.com.br/mcmv/">MCMV</a></li>
+                            <li><a href="https://lafrattajr.com.br/investimento/">Investimentos</a></li>
+                            <li><a href="https://lafrattajr.com.br/solucoes/">Soluções</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Contato</h4>
+                        <ul>
+                            <li><a href="https://wa.me/5583993578751">(83) 9.9357-8751</a></li>
+                            <li><a href="mailto:marcos@lafrattajr.com">marcos@lafrattajr.com</a></li>
+                            <li>João Pessoa - PB</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Marcos Lafratta Jr. (CRECI PB 17102-F) | Todos os direitos reservados.</p>
+                <div class="footer-legal">
+                    <a href="https://lafrattajr.com/politica-de-privacidade" target="_blank">Política de Privacidade</a>
+                    <a href="https://lafrattajr.com/termos-e-condicoes-de-uso" target="_blank">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+        <div class="cookie-banner" id="cookieBanner">
+        <p>Usamos cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa <a href="https://lafrattajr.com/politica-de-privacidade" target="_blank">Política de Privacidade</a>.</p>
+        <button id="acceptCookies">Aceitar</button>
+        </div>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
 </body>
 </html>
+
