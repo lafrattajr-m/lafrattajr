@@ -665,29 +665,31 @@ p {
     .sobre-stats {
         grid-template-columns: 1fr;
     }
-}
-.cookie-banner {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #C97D7D;
-  color: #F5F5F5;
-  text-align: center;
-  padding: 1rem;
-  z-index: 9999;
-}
-.cookie-banner a {
-  color: #FAD266;
-  text-decoration: underline;
-}
-.cookie-banner button {
-  background-color: #17A589;
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  margin-left: 1rem;
-  cursor: pointer;
-}
+ }
+    .cookie-banner {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #C97D7D;
+    color: #F5F5F5;
+    text-align: center;
+    padding: 1rem;
+    z-index: 9999;
+    }
+    .cookie-banner a {
+    color: #FAD266;
+    text-decoration: underline;
+    }
+    .cookie-banner button {
+    background-color: #17A589;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+    cursor: pointer;
+    }
+
 
 @media (max-width: 480px) {
     .container {
