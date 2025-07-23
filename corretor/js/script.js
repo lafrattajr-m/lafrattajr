@@ -79,8 +79,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const hiddenInput = document.createElement('input');
         hiddenInput.type = 'hidden';
         hiddenInput.name = '_next';
-        hiddenInput.value = 'https://wa.me/5583993578751?text=Ol%C3%A1%2C%20Marcos!%20Acabei%20de%20te%20enviar%20um%20e-mail%2C%20podemos%20conversar%3F';
-';
+        hiddenInput.value = 'https://lafrattajr.com/obrigado.html';
+
         form.appendChild(hiddenInput);
     }
 });
