@@ -93,8 +93,23 @@ h2 {
   transform: translateX(5px);
 }
 
-footer {
-  margin-top: 2rem;
+footer .footer-links {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
   font-size: 0.85rem;
-  color: var(--cinza-escuro);
 }
+
+footer .footer-links a {
+  color: var(--azul-oceano);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer .footer-links a:hover {
+  color: var(--verde-musgo);
+}
+
+
