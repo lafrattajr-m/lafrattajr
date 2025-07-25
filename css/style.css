@@ -965,11 +965,15 @@ img {
   .feature-item, .pillar-item {
     flex-direction: column;
     text-align: center;
+    align-items: center; /* Adicionado */
   }
   
   .feature-item i, .pillar-item i {
     margin-top: 0;
     margin-bottom: var(--space-xs);
+    display: flex; /* Adicionado */
+    justify-content: center; /* Adicionado */
+    align-items: center;     /* Adicionado */
   }
   
   .slider-container {
