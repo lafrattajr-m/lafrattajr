@@ -305,16 +305,16 @@ document.addEventListener('click', function(e) {
 function preloadCriticalImages() {
     const criticalImages = [
         'imgs/profile.png',
-        'imgs/projects/slide_lafrattajr_1.png',
-        'imgs/projects/slide_lafrattajr_2.png',
-        'imgs/projects/slide_lafrattajr_3.png',
-        'imgs/projects/slide_lafrattajr_4.png',
-        'imgs/projects/slide_lafrattajr_5.png',
-        'imgs/projects/slide_lafrattajr_6.png',
-        'imgs/projects/slide_lafrattajr_7.png',
-        'imgs/projects/slide_lafrattajr_8.png',
-        'imgs/projects/slide_lafrattajr_9.png',
-        'imgs/projects/slide_lafrattajr_10.png'
+        'imgs/projects/slide_lafratta_1.png',
+        'imgs/projects/slide_lafratta_2.png',
+        'imgs/projects/slide_lafratta_3.png',
+        'imgs/projects/slide_lafratta_4.png',
+        'imgs/projects/slide_lafratta_5.png',
+        'imgs/projects/slide_lafratta_6.png',
+        'imgs/projects/slide_lafratta_7.png',
+        'imgs/projects/slide_lafratta_8.png',
+        'imgs/projects/slide_lafratta_9.png',
+        'imgs/projects/slide_lafratta_10.png'
     ];
     
     criticalImages.forEach(src => {
