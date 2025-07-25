@@ -249,6 +249,21 @@ img {
   transform: translateY(-3px);
   box-shadow: var(--shadow-lg);
 }
+.social-btn.instagram {
+  background: radial-gradient(circle at 30% 30%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  color: white;
+}
+
+.social-btn.facebook {
+  background: linear-gradient(135deg, #3b5998, #2d4373);
+  color: white;
+}
+
+.social-btn.youtube {
+  background: linear-gradient(135deg, #FF0000, #CC0000);
+  color: white;
+}
+
 
 /* ===== MAIN CONTENT ===== */
 .main-content {
