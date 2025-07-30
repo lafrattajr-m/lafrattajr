@@ -959,15 +959,20 @@ body {
 }
 .cookie-banner {
   position: fixed;
-  bottom: 0;
-  width: 100%;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 500px;
   background: #2C3E50;
   color: #fff;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   text-align: center;
   z-index: 9999;
   font-size: 14px;
   display: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 .cookie-banner a {
   color: #FAD266;
@@ -978,9 +983,10 @@ body {
   color: #2C3E50;
   border: none;
   padding: 0.5rem 1rem;
-  margin-left: 10px;
+  margin-top: 0.5rem;
   font-weight: 600;
   cursor: pointer;
+  border-radius: 8px;
 }
 
 /* Responsividade */
