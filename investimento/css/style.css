@@ -1325,4 +1325,14 @@ img {
 img[loading="eager"] {
     loading: eager;
 }
+/* Centralizar em telas pequenas */
+@media (max-width: 600px) {
+  .contact-info {
+    align-items: center;
+    text-align: center;
+  }
 
+  .contact-item {
+    justify-content: center;
+  }
+}

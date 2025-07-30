@@ -1,0 +1,278 @@
+/* ===== [RESET E BASE] ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #000;
+    padding: 20px;
+}
+
+/* ===== [ESTRUTURA PRINCIPAL] ===== */
+.carrossel {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+}
+
+/* ===== [IMAGENS E LINKS] ===== */
+.slide a.image-link {
+    display: block;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.slide a.image-link:hover {
+    transform: scale(0.98);
+}
+
+.slide img {
+    width: 100%;
+    height: 506px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px 12px 0 0;
+    background: #f5f5f5; /* Fallback */
+}
+
+/* ===== [LEGENDA E CONTEÚDO] ===== */
+.legenda {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 0 0 12px 12px;
+    position: relative;
+    overflow: hidden; /* Evita ícone flutuando fora da legenda */
+}
+
+.legenda h3 {
+    color: #2C3E50;
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    padding: 0 15px;
+    line-height: 1.4;
+}
+
+/* ===== [DESCRIÇÃO COMPLETA] ===== */
+.descricao-wrapper {
+    position: relative;
+    padding-right: 40px;
+    min-height: 80px; /* altura mínima para comportar botão e indicadores */
+    transition: min-height 0.3s ease;
+}
+.descricao-wrapper:has(.descricao.show) {
+    min-height: 150px;
+}
+
+.descricao {
+    background: rgba(248, 249, 250, 0.95);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 10px;
+    display: none;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    border-left: 4px solid #FAD266;
+    backdrop-filter: blur(3px);
+    height: auto; /* ajuste conforme necessário */
+    overflow-y: auto;
+}
+
+.descricao.show {
+    display: block;
+    animation: fadeIn 0.4s ease-out;
+}
+
+.descricao p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.descricao .project-link {
+    display: inline-block;
+    background-color: #2C3E50;
+    color: #FAD266;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+
+.descricao .project-link:hover {
+    background-color: #1A2A38;
+    transform: translateX(5px);
+    text-decoration: underline;
+}
+
+
+/* ===== [BOTÃO DE DESCRIÇÃO] ===== */
+.fa-button {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: #FAD266;
+    border: none;
+    color: #2C3E50;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem; /* controla o ícone */
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: 10;
+}
+
+
+.fa-button:hover {
+    transform: scale(1.2);
+    color: #2C3E50;
+}
+
+.fa-button:focus {
+    outline: 2px solid #FAD266;
+    outline-offset: 2px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== [CONTROLES DE NAVEGAÇÃO] ===== */
+.nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    background: rgba(255,255,255,0.9);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s;
+}
+
+.nav i {
+    color: #2C3E50;
+    font-size: 1.2rem;
+}
+
+.nav:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+/* ===== [INDICADORES] ===== */
+.indicadores {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 6;
+    pointer-events: auto;
+}
+
+/* Inativas - Cinza escuro suave */
+.indicador {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #B0B0B0; /* Cinza Neutro Moderno da paleta Lafratta Jr Premium */
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.indicador:hover {
+    transform: scale(1.2);
+}
+
+/* Ativa - Amarelo Ouro */
+.indicador.ativo {
+    background: #FAD266;
+    transform: scale(1.2);
+}
+
+
+/* ===== [RESPONSIVO] ===== */
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+    }
+    
+    .carrossel {
+        border-radius: 0;
+    }
+    
+    .slide img {
+        height: 50vh;
+        border-radius: 0;
+    }
+    
+    .legenda {
+        border-radius: 0;
+        padding: 15px;
+    }
+    
+    .legenda h3 {
+        font-size: 1.1rem;
+        padding: 0 15px;
+    }
+    
+    .nav {
+        width: 38px;
+        height: 38px;
+    }
+    
+  .fa-button {
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;
+    right: 8px;
+  }
+    
+    .descricao {
+        padding: 15px;
+    }
+    
+    .descricao .project-link {
+        font-size: 0.9rem;
+    }
+}
+
+/* ===== [FALLBACKS] ===== */
+.slide img[src^="data:image/svg+xml"] {
+    background: #f5f5f5;
+    border: 1px dashed #ddd;
+}
