@@ -479,7 +479,7 @@ img {
 /* ===== GALLERY SECTION ===== */
 .gallery-section {
   padding: var(--space-xxl) 0;
-  background: var(--bg-dark);
+  background: #424242;
   color: var(--text-light);
 }
 
@@ -497,17 +497,6 @@ img {
   margin-bottom: var(--space-xl);
   font-size: 1.1rem;
 }
-
-.image-slider {
-  position: relative;
-  max-width: 900px;
-  margin: 0 auto;
-  border-radius: var(--border-radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-xl);
-}
-
-
 
 .slider-container {
   position: relative;
