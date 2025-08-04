@@ -1,297 +1,360 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soluções Digitais | Social Media | Marcos Lafratta Jr | Site em Desenvolvimento - Conecte-se!</title>
-    <link rel="icon" href="https://lafrattajr.com.br/imgs/favicon.png" type="image/png">
+    <meta name="theme-color" content="#3498DB">
+    
+    <!-- SEO Meta Tags -->
+    <title>MBA Soluções - Ecossistema Digital que Funciona | Lafratta Jr.</title>
+    <meta name="description" content="Chega de soluções genéricas. Seu negócio precisa de um ecossistema digital que funcione. Integração, automação e performance com o MBA Soluções – By Lafratta Jr.">
+    <meta name="keywords" content="
+    serviços de web designer em João Pessoa,
+    soluções digitais personalizadas para negócios locais,
+    agência de automação e CRM integrada Brasil,
+    metodologia digital MBA Soluções marketing performance,
+    serviços web completos SEO CRM desenvolvimento,
+    automações empresariais para pequenas empresas,
+    marketing digital com automação e performance
+    ">
+
+    <meta name="author" content="Marcos Lafratta Jr.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="MBA Soluções - Ecossistema Digital que Funciona">
+    <meta property="og:description" content="Transformo estratégia em resultado mensurável. Metodologia completa para o sucesso digital.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lafrattajr.com/solucoes">
+    <meta property="og:image" content="https://lafrattajr.com.br/imgs/profile.png">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="https://lafrattajr.com.br/imgs/favicon.ico">
+    <link rel="icon" type="image/png" href="https://lafrattajr.com.br/imgs/favicon.png">
+    <link rel="apple-touch-icon" href="https://lafrattajr.com.br/imgs/apple-touch-icon.png">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&family=Josefin+Sans:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Poppins:wght@300;400;500;600;700&family=Lora:ital,wght@1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <style>
-        :root {
-            --navy-dark: #061F28;
-            --white: #FFFFFF;
-            --light-gray: #C0C5C9;
-            --gold-primary: #F5B918;
-            --orange-accent: #A62F03;
-            --whatsapp-green: #25D366;
-            --whatsapp-dark: #128C7E;
-            --transition: all 0.3s ease-in-out;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        html {
-            height: 100%;
-        }
-
-        body {
-            font-family: 'Josefin Sans', sans-serif;
-            color: var(--navy-dark);
-            line-height: 1.6;
-            display: flex;
-            flex-direction: column;
-            min-height: 100%;
-            background-color: var(--navy-dark);
-            background-image: url('https://lafrattajr.com.br/imgs/bg_jampa.png');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-        
-        .main-wrapper {
-            flex: 1;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .main-container {
-            flex: 1 0 auto;
-            width: 100%;
-            max-width: 700px;
-            background-color: var(--white);
-            padding: 40px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        
-        .profile-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 30px;
-        }
-        
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid var(--gold-primary);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            margin-bottom: 15px;
-        }
-        
-        h1 {
-            font-family: 'Exo 2', sans-serif;
-            font-weight: 700;
-            color: var(--gold-primary);
-            margin: 0;
-            font-size: 2.8em;
-        }
-        
-        .subtitle {
-            font-family: 'Josefin Sans', sans-serif;
-            color: var(--navy-dark);
-            font-size: 1.2em;
-            margin-top: 5px;
-            opacity: 0.9;
-        }
-        
-        .message {
-            font-family: 'Exo 2', sans-serif;
-            font-weight: 400;
-            font-size: 1.8em;
-            margin: 30px 0;
-            color: var(--navy-dark);
-        }
-        
-        .logo-container {
-            margin: 20px 0;
-        }
-
-        .logo-principal {
-            max-width: 250px;
-            width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-            transition: var(--transition);
-            /* FORÇA O LOGO BRANCO (INVERTIDO) NO DESKTOP */
-            filter: brightness(0) invert(1);
-        }
-        
-        .contact-options {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-top: 30px;
-        }
-
-        .contact-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            max-width: 350px;
-            margin: 0 auto;
-            padding: 15px 25px;
-            border-radius: 50px;
-            font-weight: bold;
-            font-size: 1.1em;
-            text-decoration: none;
-            transition: var(--transition);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        
-        .contact-btn i {
-            margin-right: 10px;
-            font-size: 1.3em;
-        }
-
-        .whatsapp-btn {
-            background-color: var(--whatsapp-green);
-            color: white;
-            border: 2px solid var(--whatsapp-green);
-        }
-        
-        .whatsapp-btn:hover {
-            background-color: var(--whatsapp-dark);
-            border-color: var(--whatsapp-dark);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        .email-btn {
-            background-color: var(--orange-accent);
-            color: white;
-            border: 2px solid var(--orange-accent);
-        }
-
-        .email-btn:hover {
-            background-color: var(--navy-dark);
-            border-color: var(--navy-dark);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-        }
-        
-        footer {
-            flex-shrink: 0;
-            background-color: var(--navy-dark);
-            color: var(--light-gray);
-            text-align: center;
-            padding: 15px 20px;
-            width: 100%;
-            font-size: 0.9em;
-        }
-
-        footer p {
-            margin: 0;
-            color: var(--light-gray);
-        }
-        
-        /* Desktop Styles */
-        @media (min-width: 769px) {
-            .main-container {
-                border-radius: 12px;
-                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-                margin: 40px auto;
-            }
-        }
-        
-        /* Mobile Styles */
-        @media (max-width: 768px) {
-            body {
-                background: var(--white);
-                background-image: none;
-            }
-            
-            .main-container {
-                padding: 30px 20px;
-                margin: 0;
-                border-radius: 0;
-                box-shadow: none;
-            }
-            
-            h1 {
-                font-size: 2em;
-            }
-            
-            .subtitle {
-                font-size: 1em;
-            }
-            
-            .message {
-                font-size: 1.3em;
-                margin: 20px 0;
-            }
-
-            .profile-img {
-                width: 120px;
-                height: 120px;
-            }
-
-            .logo-principal {
-                /* REMOVE O FILTRO PARA MOSTRAR O LOGO ORIGINAL (PRETO) NO MOBILE */
-                filter: brightness(0) invert(0);
-            }
-        }
-
-        @media (max-width: 480px) {
-            .main-container {
-                padding: 25px 15px;
-            }
-            h1 {
-                font-size: 1.8em;
-            }
-            .message {
-                font-size: 1.1em;
-            }
-            .contact-btn {
-                font-size: 1em;
-                padding: 12px 20px;
-            }
-            .contact-btn i {
-                font-size: 1.1em;
-            }
-            footer {
-                padding: 10px 15px;
-                font-size: 0.8em;
-            }
-        }
-    </style>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://lafrattajr.com/solucoes">
 </head>
 <body>
-    <div class="main-wrapper">
-        <div class="main-container">
-            <div class="profile-section">
-                <img src="https://lafrattajr.com.br/imgs/profile.png" alt="Marcos Lafratta Jr" class="profile-img">
-                <h1>Marcos Lafratta Jr</h1>
-                <p class="subtitle">Corretor de Imóveis & Empreendedor Digital
-                    <br>João Pessoa - PB</br></p>
-            </div>
-            
-            <p class="message">Estamos em desenvolvimento para trazer o melhor conteúdo e soluções para você!</p>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="profile-container">
+                    <img src="https://lafrattajr.com.br/imgs/profile.png" alt="Marcos Lafratta Jr." class="profile-image">
+                </div>
+                <h1 class="hero-title">
+                    Chega de soluções genéricas.<br>
+                    Seu negócio precisa de um <span class="highlight">ecossistema digital que funcione.</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Integração, automação e performance com o <strong>MBA Soluções – By Lafratta Jr.</strong>
+                </p>
+                <div class="cta-container">
+                    <a href="https://wa.me/5583993578751?text=Olá! Quero conhecer o MBA Soluções para o meu negócio."
+                    class="cta-primary"
+                    target="_blank"
+                    aria-label="Conversar no WhatsApp com Marcos Lafratta Jr. sobre o MBA Soluções">
+                        <i class="fab fa-whatsapp"></i>
+                        Quero Soluções para o Meu Negócio
+                    </a>
+                </div>
 
-            <div class="logo-container">
-                <img src="https://lafrattajr.com.br/imgs/logo-principal.png" alt="Lafratta Jr Logo" class="logo-principal">
+                </div>
             </div>
+        </div>
+        <div class="hero-background"></div>
+    </section>
 
-            <div class="contact-options">
-                <a href="https://wa.me/5583993578751" class="contact-btn whatsapp-btn">
-                    <i class="fab fa-whatsapp"></i> WhatsApp: (83) 9.9357-8751
+<!-- Apresentação Estratégica -->
+<section id="apresentacao" class="presentation-section">
+    <div class="container">
+        <div class="presentation-content">
+            <div class="text-content">
+                <p class="presentation-text">
+                    No cenário digital atual, a fragmentação de ferramentas e a ausência de uma <strong>estratégia digital integrada</strong> impedem o crescimento de negócios locais e PMEs.
+                    O <strong>MBA Soluções – By Lafratta Jr.</strong> é uma <strong>metodologia completa de soluções digitais personalizadas</strong> voltada para <strong>profissionais, empresários e agências que buscam performance real</strong>.
+                    Estruturado para quem precisa de <strong>serviços web completos com SEO, CRM e automação</strong>, com foco em <strong>resultado mensurável</strong> e escalável.
+                </p>
+            </div>
+            <blockquote class="quote">
+                <p>"Transformo estratégia em resultado mensurável."</p>
+                <cite>– Marcos Lafratta Jr.</cite>
+            </blockquote>
+        </div>
+    </div>
+</section>
+
+
+<!-- O Que é o MBA Soluções -->
+<section id="sobre" class="about-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">O Que é o MBA Soluções?</h2>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <p>
+                    O <strong>MBA Soluções</strong>, ou <strong>Master Business Application</strong>, é uma <strong>metodologia proprietária de transformação digital</strong> desenvolvida por Marcos Lafratta Jr..
+                    Mais do que um conjunto de ferramentas, trata-se de um <strong>framework estratégico para negócios digitais</strong>, projetado para <strong>automatizar processos, escalar campanhas de marketing digital, integrar sistemas web personalizados</strong> e impulsionar resultados reais.
+                </p>
+                <ul class="framework-list">
+                    <li><i class="fas fa-robot"></i> Inteligência Artificial</li>
+                    <li><i class="fas fa-cogs"></i> Automação</li>
+                    <li><i class="fas fa-bullhorn"></i> Marketing Digital</li>
+                    <li><i class="fas fa-chart-line"></i> Gestão Estratégica</li>
+                </ul>
+                <p>
+                    Ideal para <strong>empresas que buscam soluções digitais personalizadas</strong>, o MBA Soluções oferece <strong>serviços web completos com SEO, CRM, funis automatizados e análise de dados</strong> — tudo alinhado a uma execução prática e orientada a <strong>performance mensurável</strong>.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Pilares da Metodologia -->
+    <section id="pilares" class="pillars-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Pilares da Metodologia</h2>
+                <p class="section-subtitle">9 áreas integradas para o sucesso do seu negócio</p>
+            </div>
+            <div class="pillars-grid">
+                <div class="pillar-card" data-pillar="1">
+                    <div class="pillar-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3 class="pillar-title">Gestão & Produtividade</h3>
+                    <p class="pillar-description">Otimize fluxos de trabalho e maximize a eficiência operacional.</p>
+                </div>
+                
+                <div class="pillar-card" data-pillar="2">
+                    <div class="pillar-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="pillar-title">Desenvolvimento & Tecnologia</h3>
+                    <p class="pillar-description">Estrutura robusta para presença digital escalável.</p>
+                </div>
+                
+                <div class="pillar-card" data-pillar="3">
+                    <div class="pillar-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="pillar-title">IA – Conteúdo & Comunicação</h3>
+                    <p class="pillar-description">Criação de textos, vídeos e áudios impactantes com IA.</p>
+                </div>
+                
+                <div class="pillar-card" data-pillar="4">
+                    <div class="pillar-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3 class="pillar-title">Marketing Digital & Anúncios</h3>
+                    <p class="pillar-description">Campanhas com foco em performance e geração de leads.</p>
+                </div>
+                
+                <div class="pillar-card" data-pillar="5">
+                    <div class="pillar-icon">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                    <h3 class="pillar-title">CRM, Leads & Automação</h3>
+                    <p class="pillar-description">Funis automatizados e gestão inteligente de clientes.</p>
+                </div>
+                
+                <div class="pillar-card" data-pillar="6">
+                    <div class="pillar-icon">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <h3 class="pillar-title">SEO & Análise de Dados</h3>
+                    <p class="pillar-description">Visibilidade online e decisões baseadas em dados.</p>
+                </div>
+                
+                <div class="pillar-card" data-pillar="7">
+                    <div class="pillar-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3 class="pillar-title">Dashboards & Relatórios</h3>
+                    <p class="pillar-description">Métricas, indicadores e ROI em tempo real.</p>
+                </div>
+                
+                <div class="pillar-card" data-pillar="8">
+                    <div class="pillar-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="pillar-title">Infraestrutura & Segurança</h3>
+                    <p class="pillar-description">Estabilidade, backups e proteção digital.</p>
+                </div>
+                
+                <div class="pillar-card" data-pillar="9">
+                    <div class="pillar-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="pillar-title">Treinamento de Equipes</h3>
+                    <p class="pillar-description">Capacitação prática para times de marketing e vendas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Por Que Escolher -->
+    <section id="beneficios" class="benefits-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Por Que Escolher o MBA Soluções?</h2>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-check">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <p>Integração prática entre todas as ferramentas</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-check">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <p>Processos validados em projetos reais</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-check">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <p>Automação escalável para seu modelo de negócio</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-check">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <p>Geração de autoridade e produtividade</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-check">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <p>Foco em conversão de leads e retorno sobre investimento</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Para Quem É -->
+    <section id="publico" class="audience-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Para Quem É o MBA Soluções?</h2>
+            </div>
+            <div class="audience-grid">
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Profissionais Liberais</h3>
+                    <ul>
+                        <li>Otimização da presença online</li>
+                        <li>Estratégias de branding e autoridade</li>
+                    </ul>
+                </div>
+                
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Gestores e Empresários</h3>
+                    <ul>
+                        <li>Performance, SEO e tráfego qualificado</li>
+                        <li>CRM integrado e funil de vendas automatizado</li>
+                    </ul>
+                </div>
+                
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Criadores de Conteúdo Digital</h3>
+                    <ul>
+                        <li>Automação de processos criativos</li>
+                        <li>Monetização e gestão de audiência</li>
+                    </ul>
+                </div>
+                
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Agências e Times de Marketing</h3>
+                    <ul>
+                        <li>Metodologia escalável para clientes</li>
+                        <li>Ferramentas integradas de gestão</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- CTA Final -->
+<section id="cta-final" class="final-cta-section">
+    <div class="container">
+        <div class="final-cta-content">
+            <h2 class="final-cta-title">Vamos transformar sua estratégia em lucro?</h2>
+            <div class="final-cta-buttons">
+                <a href="https://wa.me/5583993578751?text=Olá! Quero transformar minha estratégia em lucro com o MBA Soluções."
+                   class="cta-whatsapp"
+                   target="_blank"
+                   aria-label="Falar com Marcos Lafratta Jr. via WhatsApp sobre o MBA Soluções">
+                    <i class="fab fa-whatsapp"></i>
+                    Fale comigo no WhatsApp
                 </a>
-                <a href="mailto:marcos@lafrattajr.com" class="contact-btn email-btn">
-                    <i class="fas fa-envelope"></i> marcos@lafrattajr.com
+                <a href="mailto:marcos@lafrattajr.com?subject=Proposta MBA Soluções&body=Olá Marcos, gostaria de receber uma proposta do MBA Soluções para o meu negócio."
+                   class="cta-email"
+                   aria-label="Enviar e-mail para Marcos Lafratta Jr. solicitando proposta do MBA Soluções">
+                    <i class="fas fa-envelope"></i>
+                    Receba uma proposta
                 </a>
             </div>
         </div>
-        
-        <footer>
-            <p>&copy; <span id="year"></span> Marcos Lafratta Jr - Todos os direitos reservados</p>
-        </footer>
+    </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-copyright">
+                    © <span id="current-year"></span> Marcos Lafratta Jr. (CRECI PB 17102-F) | Todos os direitos reservados.
+                </p>
+                <div class="footer-links">
+                    <span>Instagram: <a href="https://instagram.com/solucoes.lafrattajr" target="_blank">@solucoes.lafrattajr</a></span>
+                    <span>E-mail: <a href="mailto:marcos@lafrattajr.com">marcos@lafrattajr.com</a></span>
+                    <span>WhatsApp: <a href="https://wa.me/5583993578751">(83) 9.9357-8751</a></span>
+                    <span><a href="https://lafrattajr.com/politica-de-privacidade">Política de Privacidade</a> | <a href="https://lafrattajr.com/termos-e-condicoes-de-uso">Termos de Uso</a></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent -->
+    <div id="cookie-banner" class="cookie-banner" style="display: none;">
+        <p>Usamos cookies para melhorar sua experiência. <a href="https://lafrattajr.com/politica-de-privacidade" target="_blank">Saiba mais</a>.</p>
+        <button id="accept-cookies">Aceitar</button>
     </div>
 
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+    <!-- JavaScript -->
+    <script src="js/main.js" defer></script>
+
 </body>
 </html>
+
+
