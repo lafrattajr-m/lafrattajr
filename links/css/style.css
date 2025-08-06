@@ -92,7 +92,16 @@ h2 {
   background-color: #f5c430;
   transform: translateX(5px);
 }
+/* Destaque em verde */
+.link-button.solucoes {
+  background-color: #D88C6E;
+  color: #FFFFFF;
+}
 
+.link-button.link-button.solucoes:hover {
+  background-color: #f5c430;
+  transform: translateX(5px);
+}
 footer .footer-links {
   margin-top: 0.5rem;
   display: flex;
