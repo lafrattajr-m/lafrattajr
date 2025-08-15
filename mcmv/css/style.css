@@ -457,8 +457,9 @@ a:hover {
 }
 .cookie-banner {
   position: fixed;
-  bottom: 0;
-  width: 100%;
+  bottom: 20px;
+  right: 20px;
+  width: 50%;
   background: #2C3E50;
   color: #fff;
   padding: 1rem;
@@ -466,11 +467,16 @@ a:hover {
   z-index: 9999;
   font-size: 14px;
   display: none;
+  border-radius: 10px; /* Cantos arredondados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para melhor visualização */
+  max-width: 600px; /* Limite máximo para não ficar muito largo em telas grandes */
 }
+
 .cookie-banner a {
   color: #FAD266;
   text-decoration: underline;
 }
+
 .cookie-banner button {
   background: #FAD266;
   color: #2C3E50;
@@ -479,6 +485,12 @@ a:hover {
   margin-left: 10px;
   font-weight: 600;
   cursor: pointer;
+  border-radius: 5px; /* Cantos arredondados no botão */
+  transition: background 0.3s ease; /* Efeito hover suave */
+}
+
+.cookie-banner button:hover {
+  background: #e6c252; /* Cor mais escura no hover */
 }
 
 /* Versão simplificada para manter consistência */
